@@ -1,0 +1,40 @@
+{
+  "id" : "967e836f-cfcb-4ed8-9a79-df080b71a0aa",
+  "names" : [ {
+    "value" : "Response Transformation",
+    "locale" : "en"
+  } ],
+  "templateKey" : "responseTransformation",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    } ]
+  }, {
+    "templateKey" : "responseTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "restHeaderTransformation",
+      "parameters" : [ {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.x-data}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "${response.payload.jsonPath[$.empOut.id]}" ]
+        } ]
+      }, {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.x-apiname}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "${request.application.name}" ]
+        } ]
+      } ]
+    } ]
+  } ],
+  "active" : false
+}

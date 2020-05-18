@@ -1,0 +1,14 @@
+{
+  "id" : "fe1d5c3c-e02a-11e7-9d18-d9340e1d9bce",
+  "name" : "LabCaseEndpointAlias",
+  "description" : "Endpoint URI https://labcase.softwareag.com",
+  "type" : "endpoint",
+  "owner" : "Administrator",
+  "endPointURI" : "https://labcase.softwareag.com",
+  "connectionTimeout" : 0,
+  "readTimeout" : 0,
+  "suspendDurationOnFailure" : 0,
+  "optimizationTechnique" : "None",
+  "passSecurityHeaders" : false,
+  "keystoreAlias" : ""
+}

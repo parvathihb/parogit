@@ -1,0 +1,43 @@
+{
+  "id" : "1a598590-c99c-4bc2-a69f-e878e8aee037",
+  "names" : [ {
+    "value" : "Default Policy for API createEmpData",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "f322b8cf-c96f-4ddc-8908-82d2252c623f",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "52a6b894-71cc-4994-b2aa-c486b55ee9d4",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "fd44acfb-1031-469f-8a5b-014b2aabf7a5",
+      "order" : "0"
+    }, {
+      "enforcementObjectId" : "9555beca-ecca-4b3c-97da-a6745f6be9b6",
+      "order" : "1"
+    }, {
+      "enforcementObjectId" : "df80eafd-427e-4a83-b61d-c5c14985b1c1",
+      "order" : "2"
+    } ],
+    "stageKey" : "responseProcessing"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

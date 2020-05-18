@@ -1,0 +1,52 @@
+{
+  "id" : "15c2caa8-004c-43e1-8b7f-6546902ccaf8",
+  "names" : [ {
+    "value" : "Default Policy for API createEmpData",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "7add1d6b-7c3d-4ba4-8f5b-3cca0c0ab33e",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "03cd438a-7e02-4a41-b8b5-5979d4631fbe",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "e8e19bc3-3055-41a9-ae14-afa4dae039f5",
+      "order" : "0"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "a9b8e344-35a4-4e3b-93a3-5a2fe2b29bc0",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "979750a9-c82c-4d32-b727-908671e64e16",
+      "order" : "0"
+    }, {
+      "enforcementObjectId" : "967e836f-cfcb-4ed8-9a79-df080b71a0aa",
+      "order" : "1"
+    } ],
+    "stageKey" : "responseProcessing"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

@@ -1,0 +1,32 @@
+{
+  "id" : "431181ac-aca2-42a7-b025-08f28df52e46",
+  "type" : "OAUTH2",
+  "authServerAlias" : "local",
+  "name" : "JWT_Access289627ea-9634-4929-a105-cdd1e7497ebf-$sys-default-oauth",
+  "clientId" : "8b923c62-0142-4cfd-8c54-2be233e49f52",
+  "dcrConfig" : {
+    "allowedGrantTypes" : [ "implicit", "client_credentials", "authorization_code" ],
+    "clientType" : "CONFIDENTIAL",
+    "clientName" : "JWT_Access289627ea-9634-4929-a105-cdd1e7497ebf-$sys-default-oauth",
+    "clientVersion" : "1.0",
+    "expirationInterval" : "3600",
+    "scopes" : [ ],
+    "redirectUris" : [ "https://localhost:18102/abs/apiportalext/v1/oauth2/callback" ]
+  },
+  "clientRegistration" : {
+    "clientId" : "8b923c62-0142-4cfd-8c54-2be233e49f52",
+    "name" : "JWT_Access289627ea-9634-4929-a105-cdd1e7497ebf-$sys-default-oauth",
+    "version" : "1.0",
+    "type" : "confidential",
+    "tokenLifetime" : 3600,
+    "tokenRefreshLimit" : 0,
+    "clientSecret" : "********************************",
+    "enabled" : true,
+    "redirectUris" : [ "https://localhost:18102/abs/apiportalext/v1/oauth2/callback" ],
+    "clScopes" : [ ],
+    "authCodeAllowed" : true,
+    "implicitAllowed" : true,
+    "clientCredentialsAllowed" : true,
+    "resourceOwnerAllowed" : false
+  }
+}

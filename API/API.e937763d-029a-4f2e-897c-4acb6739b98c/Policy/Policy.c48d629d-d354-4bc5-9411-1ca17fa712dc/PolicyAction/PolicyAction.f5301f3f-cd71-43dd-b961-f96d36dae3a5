@@ -1,0 +1,19 @@
+{
+  "id" : "f5301f3f-cd71-43dd-b961-f96d36dae3a5",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://SAG-6F0VMV2.eur.ad.sag:6000/ws/soapCacheTest:cacheTestSoap/soapCacheTest_cacheTestSoap_Port" ]
+  }, {
+    "templateKey" : "soapOptimize",
+    "values" : [ "None" ]
+  }, {
+    "templateKey" : "passSecurityHeaders",
+    "values" : [ "false" ]
+  } ],
+  "active" : false
+}

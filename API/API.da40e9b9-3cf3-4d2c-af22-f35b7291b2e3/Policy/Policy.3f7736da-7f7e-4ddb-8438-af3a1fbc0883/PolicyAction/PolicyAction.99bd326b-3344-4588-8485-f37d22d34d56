@@ -1,0 +1,22 @@
+{
+  "id" : "99bd326b-3344-4588-8485-f37d22d34d56",
+  "names" : [ {
+    "value" : "Outbound Authentication - Transport",
+    "locale" : "en"
+  } ],
+  "templateKey" : "outboundTransportAuthentication",
+  "parameters" : [ {
+    "templateKey" : "transportSecurity",
+    "parameters" : [ {
+      "templateKey" : "authType",
+      "values" : [ "ALIAS" ]
+    }, {
+      "templateKey" : "authMode",
+      "values" : [ "NEW" ]
+    }, {
+      "templateKey" : "alias",
+      "values" : [ "${MyLabCaseAccountThesse}" ]
+    } ]
+  } ],
+  "active" : false
+}

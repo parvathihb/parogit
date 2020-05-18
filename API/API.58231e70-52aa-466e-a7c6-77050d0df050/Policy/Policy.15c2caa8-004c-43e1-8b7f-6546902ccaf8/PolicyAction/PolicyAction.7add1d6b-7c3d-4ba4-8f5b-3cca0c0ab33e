@@ -1,0 +1,16 @@
+{
+  "id" : "7add1d6b-7c3d-4ba4-8f5b-3cca0c0ab33e",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://daeitrain44459.eur.ad.sag:5555/rad/cacheRepro:employeeDataCreareAPIDescriptor/${sys:resource_path}" ]
+  }, {
+    "templateKey" : "method",
+    "values" : [ "CUSTOM" ]
+  } ],
+  "active" : false
+}

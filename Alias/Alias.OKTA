@@ -1,0 +1,12 @@
+{
+  "id" : "OKTA",
+  "name" : "OKTA",
+  "type" : "clientMetadataMapping",
+  "owner" : "Administrator",
+  "providerName" : "OKTA",
+  "implNames" : { },
+  "extendedValues" : { },
+  "extendedValuesV2" : [ ],
+  "generateCredentials" : false,
+  "supportedApplicationTypes" : [ "web", "native", "browser", "service" ]
+}

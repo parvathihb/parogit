@@ -1,0 +1,40 @@
+{
+  "id" : "a09439f1-9d3a-4f2b-a183-d9dce826ba84",
+  "names" : [ {
+    "value" : "Default Policy for API SINUS2_RechercheSignataireACDCService_1_0_0",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "076bf15c-2b85-4c33-b52f-5e94f7280b78",
+      "order" : "0"
+    }, {
+      "enforcementObjectId" : "70487043-5b45-4bf2-847a-61c972ef7efe",
+      "order" : "1"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "c922aa8c-6be0-4108-aeec-015c048a13b9",
+      "order" : "0"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "4426eda1-6177-4201-b598-ccbf6e4707e5",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

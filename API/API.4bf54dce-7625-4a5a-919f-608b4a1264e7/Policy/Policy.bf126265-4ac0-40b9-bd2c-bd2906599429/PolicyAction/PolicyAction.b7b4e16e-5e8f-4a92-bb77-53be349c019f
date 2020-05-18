@@ -1,0 +1,13 @@
+{
+  "id" : "b7b4e16e-5e8f-4a92-bb77-53be349c019f",
+  "names" : [ {
+    "value" : "Service Result Cache",
+    "locale" : "en"
+  } ],
+  "templateKey" : "serviceResultCache",
+  "parameters" : [ {
+    "templateKey" : "ttl",
+    "values" : [ "1m" ]
+  } ],
+  "active" : false
+}

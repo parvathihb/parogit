@@ -1,0 +1,7 @@
+{
+  "id" : "gateway.destination.email.handle",
+  "pw" : "oD5TWi9XNDg=",
+  "encryptorId" : "EntrustPbePlus",
+  "saltString" : "VPv5LLUNjmWmbZ2R2mTzjA==",
+  "iterationCount" : 2048
+}

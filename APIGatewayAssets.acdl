@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="APIGatewayAssets" displayName="Assets for API Gateway" runtimeVersion="10.5" targetNamespace="http://namespaces.softwareag.com/webMethods/APIGateway" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildTimestamp" value="2020-05-18T17:35:11"/>
+    <asset name="API.d2b6ea99-ea00-4073-8935-518f63117252" displayName="cacheTestRad[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.05294b56-3ca0-45ca-bd0b-1240c82ece6f</dependsOn>
+        <dependsOn>APIGateway:Policy.7e890152-b07c-40a6-ba1f-722c5d24da64</dependsOn>
+    </asset>
+    <asset name="Policy.7e890152-b07c-40a6-ba1f-722c5d24da64" displayName="Policy For API cacheTestRad[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.1fd185f8-d829-4434-ab0d-93f34e48a2e1</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.3d4f1e41-8426-47be-b8fc-7db654fe851c</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.5f5fc81a-a0f4-4001-a6f7-1daf72c3417f</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.d0ecdfe1-988c-47ad-86be-0e91f847728b</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.d204cf1f-6c2e-47f6-a37b-a6938bd6ab19</dependsOn>
+    </asset>
+    <asset name="PolicyAction.d0ecdfe1-988c-47ad-86be-0e91f847728b" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API cacheTestRad[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.3d4f1e41-8426-47be-b8fc-7db654fe851c" displayName="Policy Action [Service Result Cache] -&gt; Policy For API cacheTestRad[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.d204cf1f-6c2e-47f6-a37b-a6938bd6ab19" displayName="Policy Action [Custom Extension] -&gt; Policy For API cacheTestRad[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.1fd185f8-d829-4434-ab0d-93f34e48a2e1" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API cacheTestRad[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.5f5fc81a-a0f4-4001-a6f7-1daf72c3417f" displayName="Policy Action [Response Transformation] -&gt; Policy For API cacheTestRad[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AccessControlList.05294b56-3ca0-45ca-bd0b-1240c82ece6f" displayName="AccessControlList for asset : cacheTestRad" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="AccessProfile.Administrators" displayName="Administrators" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+        <dependsOn>APIGateway:Group.API-Gateway-Administrators</dependsOn>
+        <dependsOn>APIGateway:Group.Administrators</dependsOn>
+    </asset>
+    <asset name="Group.Administrators" displayName="Administrators" isDeployable="true">
+        <implementation.generic type="Group"/>
+        <dependsOn>APIGateway:User.Administrator</dependsOn>
+        <dependsOn>APIGateway:User.bb450809-7693-437a-9a5d-6ad36c50f879</dependsOn>
+    </asset>
+    <asset name="User.Administrator" displayName="Administrator" isDeployable="true">
+        <implementation.generic type="User"/>
+    </asset>
+    <asset name="User.bb450809-7693-437a-9a5d-6ad36c50f879" displayName="user" isDeployable="true">
+        <implementation.generic type="User"/>
+    </asset>
+    <asset name="Group.API-Gateway-Administrators" displayName="API-Gateway-Administrators" isDeployable="true">
+        <implementation.generic type="Group"/>
+    </asset>
+    <asset name="AccessProfile.Default" displayName="Default" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+        <dependsOn>APIGateway:Group.Everybody</dependsOn>
+    </asset>
+    <asset name="Group.Everybody" displayName="Everybody" isDeployable="true">
+        <implementation.generic type="Group"/>
+        <dependsOn>APIGateway:User.44e31996-5f2b-4dcb-8e44-9d7e7b801e0d</dependsOn>
+        <dependsOn>APIGateway:User.aeed25ff-9e46-42b4-8075-a9810955cdeb</dependsOn>
+    </asset>
+    <asset name="User.44e31996-5f2b-4dcb-8e44-9d7e7b801e0d" displayName="user1" isDeployable="true">
+        <implementation.generic type="User"/>
+    </asset>
+    <asset name="User.aeed25ff-9e46-42b4-8075-a9810955cdeb" displayName="Prema" isDeployable="true">
+        <implementation.generic type="User"/>
+    </asset>
+    <asset name="Policy.GlobalLogInvocationPolicy" displayName="Transaction logging[Global Policy]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.GlobalLogInvocationPolicyAction</dependsOn>
+    </asset>
+    <asset name="PolicyAction.GlobalLogInvocationPolicyAction" displayName="Policy Action [Log Invocation] -&gt; Transaction logging" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.d7da25f9-0f8d-4da9-b655-2c2c15d4e3d7" displayName="Policy For API addTwoRestTrnformation[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.c70856bf-7f3c-45c0-9e56-7317da3da50f</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.f1f1d457-1c33-4d56-bf92-8d61518b2093</dependsOn>
+    </asset>
+    <asset name="PolicyAction.c70856bf-7f3c-45c0-9e56-7317da3da50f" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API addTwoRestTrnformation[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.f1f1d457-1c33-4d56-bf92-8d61518b2093" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API addTwoRestTrnformation[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.whiteListingIPs" displayName="whiteListingIPs" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Alias.ServiceConsulDefault" displayName="ServiceConsulDefault" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="Policy.a09439f1-9d3a-4f2b-a183-d9dce826ba84" displayName="Policy For API SINUS2_RechercheSignataireACDCService[1.0.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.076bf15c-2b85-4c33-b52f-5e94f7280b78</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.4426eda1-6177-4201-b598-ccbf6e4707e5</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.70487043-5b45-4bf2-847a-61c972ef7efe</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.c922aa8c-6be0-4108-aeec-015c048a13b9</dependsOn>
+    </asset>
+    <asset name="PolicyAction.076bf15c-2b85-4c33-b52f-5e94f7280b78" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API SINUS2_RechercheSignataireACDCService[1.0.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.70487043-5b45-4bf2-847a-61c972ef7efe" displayName="Policy Action [Outbound Authentication - Transport] -&gt; Policy For API SINUS2_RechercheSignataireACDCService[1.0.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:PassmanData.70487043-5b45-4bf2-847a-61c972ef7efeclientPassword</dependsOn>
+    </asset>
+    <asset name="PassmanData.70487043-5b45-4bf2-847a-61c972ef7efeclientPassword" displayName="70487043-5b45-4bf2-847a-61c972ef7efeclientPassword" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PolicyAction.c922aa8c-6be0-4108-aeec-015c048a13b9" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API SINUS2_RechercheSignataireACDCService[1.0.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.4426eda1-6177-4201-b598-ccbf6e4707e5" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API SINUS2_RechercheSignataireACDCService[1.0.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.cebb9e86-9b49-43e0-b3d6-33e728a421b5" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API generateID[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.f48696a1-1b39-4b74-9cf4-bb5dbc7ad6fd" displayName="Service Result Cache" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.errorProcessing" displayName="Service fault" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Alias.b73a8400-e008-11e7-9d18-f5832492b6de" displayName="MyLabCaseAccountThesse" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <dependsOn>APIGateway:PassmanData.HTTP_AUTH_OUTBOUND_CLIENT_PWDMyLabCaseAccountThesse</dependsOn>
+        <property name="Username for HTTP Transport Security Alias MyLabCaseAccountThesse" many="false" isSecure="false" displayName="Username for HTTP Transport Security Alias MyLabCaseAccountThesse">
+            <value>y508854</value>
+        </property>
+        <property name="Password for HTTP Transport Security Alias MyLabCaseAccountThesse" many="false" isSecure="true" displayName="Password for HTTP Transport Security Alias MyLabCaseAccountThesse">
+            <value>{AES}vDt83fIfdPbOEh8vBitePrw7fN3yH3T2zhIfLwYrXj5pitcLjd1NawNQdFYbmaFM</value>
+        </property>
+    </asset>
+    <asset name="PassmanData.HTTP_AUTH_OUTBOUND_CLIENT_PWDMyLabCaseAccountThesse" displayName="HTTP_AUTH_OUTBOUND_CLIENT_PWDMyLabCaseAccountThesse" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PortalGateway.9bd971a8-42e7-4d92-b342-fa9898633e36" displayName="CheckPOrtal" isDeployable="true">
+        <implementation.generic type="PortalGateway"/>
+        <dependsOn>APIGateway:PassmanData.9bd971a8-42e7-4d92-b342-fa9898633e36APIPORTAL</dependsOn>
+        <dependsOn>APIGateway:PassmanData.9bd971a8-42e7-4d92-b342-fa9898633e36GATEWAY</dependsOn>
+    </asset>
+    <asset name="PassmanData.9bd971a8-42e7-4d92-b342-fa9898633e36GATEWAY" displayName="9bd971a8-42e7-4d92-b342-fa9898633e36GATEWAY" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.9bd971a8-42e7-4d92-b342-fa9898633e36APIPORTAL" displayName="9bd971a8-42e7-4d92-b342-fa9898633e36APIPORTAL" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="AccessControlList.877411c9-63fe-480d-a4ce-d1b120271257" displayName="AccessControlList for asset : petStoreSOAP" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="PolicyAction.9ce722b9-84f2-47fd-bd3d-bb097c3bffba" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API LabCaseTestService_APIG[1.0] Scope [WRITE]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="API.e937763d-029a-4f2e-897c-4acb6739b98c" displayName="soapCacheTest.cacheTestSoap[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.9c9e6eb9-090d-40c2-8fe2-9fc840c842ba</dependsOn>
+        <dependsOn>APIGateway:Policy.c48d629d-d354-4bc5-9411-1ca17fa712dc</dependsOn>
+    </asset>
+    <asset name="Policy.c48d629d-d354-4bc5-9411-1ca17fa712dc" displayName="Policy For API soapCacheTest.cacheTestSoap[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.3f446386-894d-4fa1-b508-d8d99c3befcc</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.7537fa15-073f-44c1-a92b-fb3fbfd33cef</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.f5301f3f-cd71-43dd-b961-f96d36dae3a5</dependsOn>
+    </asset>
+    <asset name="PolicyAction.f5301f3f-cd71-43dd-b961-f96d36dae3a5" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API soapCacheTest.cacheTestSoap[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.3f446386-894d-4fa1-b508-d8d99c3befcc" displayName="Policy Action [Service Result Cache] -&gt; Policy For API soapCacheTest.cacheTestSoap[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.7537fa15-073f-44c1-a92b-fb3fbfd33cef" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API soapCacheTest.cacheTestSoap[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AccessControlList.9c9e6eb9-090d-40c2-8fe2-9fc840c842ba" displayName="AccessControlList for asset : soapCacheTest.cacheTestSoap" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="PolicyAction.222f443b-bd7c-4711-9143-f96a52471adb" displayName="Service Result Cache" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="JmsConnectionAlias.DEFAULT_IS_JMS_CONNECTION" displayName="DEFAULT_IS_JMS_CONNECTION" isDeployable="true">
+        <implementation.generic type="JmsConnectionAlias"/>
+        <dependsOn>APIGateway:JndiProviderAlias.DEFAULT_IS_JNDI_PROVIDER</dependsOn>
+    </asset>
+    <asset name="JndiProviderAlias.DEFAULT_IS_JNDI_PROVIDER" displayName="DEFAULT_IS_JNDI_PROVIDER" isDeployable="true">
+        <implementation.generic type="JndiProviderAlias"/>
+    </asset>
+    <asset name="PolicyAction.9d92791c-5607-4caa-9b1e-e6c7ee348d89" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API cacheResultsGetPost[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.adee086d-e77f-4197-a7fb-08dde4eb6a4f" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API checkAPI[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.1a598590-c99c-4bc2-a69f-e878e8aee037" displayName="Policy For API createEmpData[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.52a6b894-71cc-4994-b2aa-c486b55ee9d4</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.9555beca-ecca-4b3c-97da-a6745f6be9b6</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.df80eafd-427e-4a83-b61d-c5c14985b1c1</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.f322b8cf-c96f-4ddc-8908-82d2252c623f</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.fd44acfb-1031-469f-8a5b-014b2aabf7a5</dependsOn>
+    </asset>
+    <asset name="PolicyAction.f322b8cf-c96f-4ddc-8908-82d2252c623f" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API createEmpData[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.52a6b894-71cc-4994-b2aa-c486b55ee9d4" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API createEmpData[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.fd44acfb-1031-469f-8a5b-014b2aabf7a5" displayName="Policy Action [Response Transformation] -&gt; Policy For API createEmpData[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.9555beca-ecca-4b3c-97da-a6745f6be9b6" displayName="Policy Action [Response Transformation] -&gt; Policy For API createEmpData[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.df80eafd-427e-4a83-b61d-c5c14985b1c1" displayName="Policy Action [Response Transformation] -&gt; Policy For API createEmpData[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.85bc0736-f92c-453e-894c-ab46e563c6ec" displayName="Policy Action [Service Result Cache] -&gt; Policy For API TryAPI[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AccessControlList.594f1b56-684d-411c-a4eb-3112805c325c" displayName="AccessControlList for asset : JWT_Access" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="Truststore.DEFAULT_IS_TRUSTSTORE" displayName="DEFAULT_IS_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="Truststore"/>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_IS_TRUSTSTORE</dependsOn>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_IS_TRUSTSTORE" displayName="wm.security.keystore.DEFAULT_IS_TRUSTSTORE" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PolicyAction.79a71620-3405-421d-af45-ec4e977910eb" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API petStoreSOAP[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.extended" displayName="Extended settings" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Alias.OKTA" displayName="OKTA" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="PolicyAction.7add1d6b-7c3d-4ba4-8f5b-3cca0c0ab33e" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API createEmpData[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.a32e58ea-cd1b-4cf4-b718-bfbc4715a896" displayName="Policy Action [Service Result Cache] -&gt; Policy For API generateID[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="API.4bf54dce-7625-4a5a-919f-608b4a1264e7" displayName="petStore[2.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.39ef29ea-2183-45cf-868c-d9c7851e75e0</dependsOn>
+        <dependsOn>APIGateway:Application.31ee9cd4-7ac5-4044-97a5-a336b06ccd94</dependsOn>
+        <dependsOn>APIGateway:Policy.bf126265-4ac0-40b9-bd2c-bd2906599429</dependsOn>
+    </asset>
+    <asset name="Policy.bf126265-4ac0-40b9-bd2c-bd2906599429" displayName="Policy For API petStore[2.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.0cd1f0ea-1cd1-4086-807a-8e1505d44e6b</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.0dfdd759-90e6-41e7-86d7-baedd04fb31a</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.8a6a4e8b-5c99-40ab-a861-9a406ada225c</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.b7b4e16e-5e8f-4a92-bb77-53be349c019f</dependsOn>
+    </asset>
+    <asset name="PolicyAction.0cd1f0ea-1cd1-4086-807a-8e1505d44e6b" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API petStore[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.b7b4e16e-5e8f-4a92-bb77-53be349c019f" displayName="Policy Action [Service Result Cache] -&gt; Policy For API petStore[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.8a6a4e8b-5c99-40ab-a861-9a406ada225c" displayName="Policy Action [Custom Extension] -&gt; Policy For API petStore[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.0dfdd759-90e6-41e7-86d7-baedd04fb31a" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API petStore[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Application.31ee9cd4-7ac5-4044-97a5-a336b06ccd94" displayName="genericApp" isDeployable="true">
+        <implementation.generic type="Application"/>
+        <dependsOn>APIGateway:API.4bf54dce-7625-4a5a-919f-608b4a1264e7</dependsOn>
+        <dependsOn>APIGateway:API.5c907523-c5d9-459e-b6cb-953c770a0b16</dependsOn>
+        <dependsOn>APIGateway:AccessControlList.1605f8da-a605-4a0f-bdb2-1639f84fb1d3</dependsOn>
+        <dependsOn>APIGateway:PassmanData.API_ACCESS_KEY31ee9cd4-7ac5-4044-97a5-a336b06ccd94</dependsOn>
+        <dependsOn>APIGateway:RegisteredApplication.31ee9cd4-7ac5-4044-97a5-a336b06ccd94</dependsOn>
+    </asset>
+    <asset name="API.5c907523-c5d9-459e-b6cb-953c770a0b16" displayName="checkAPI[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.c8a1686b-ae59-4a84-a2d7-72c69f24b250</dependsOn>
+        <dependsOn>APIGateway:Application.31ee9cd4-7ac5-4044-97a5-a336b06ccd94</dependsOn>
+        <dependsOn>APIGateway:Policy.23f78b5c-b6f8-459c-91c4-9f5abf2a54e7</dependsOn>
+    </asset>
+    <asset name="Policy.23f78b5c-b6f8-459c-91c4-9f5abf2a54e7" displayName="Policy For API checkAPI[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.290bd4cb-a9d9-462b-b77c-31a94199fbec</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.adee086d-e77f-4197-a7fb-08dde4eb6a4f</dependsOn>
+    </asset>
+    <asset name="PolicyAction.290bd4cb-a9d9-462b-b77c-31a94199fbec" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API checkAPI[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AccessControlList.c8a1686b-ae59-4a84-a2d7-72c69f24b250" displayName="AccessControlList for asset : checkAPI" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="PassmanData.API_ACCESS_KEY31ee9cd4-7ac5-4044-97a5-a336b06ccd94" displayName="API_ACCESS_KEY31ee9cd4-7ac5-4044-97a5-a336b06ccd94" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="RegisteredApplication.31ee9cd4-7ac5-4044-97a5-a336b06ccd94" displayName="RegisteredApplication [ genericApp ]" isDeployable="true">
+        <implementation.generic type="RegisteredApplication"/>
+    </asset>
+    <asset name="AccessControlList.1605f8da-a605-4a0f-bdb2-1639f84fb1d3" displayName="AccessControlList for asset : genericApp" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="AccessControlList.39ef29ea-2183-45cf-868c-d9c7851e75e0" displayName="AccessControlList for asset : petStore" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="PolicyAction.6d21d15d-bd1b-43ba-9201-fbaa67571c71" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API cacheResultsGetPost[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AccessControlList.9c37c03f-2c16-42ae-bb98-623d2b019db2" displayName="AccessControlList for asset : genID" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="AccessControlList.cbd5b424-4520-4914-bd52-0f475b075522" displayName="AccessControlList for asset : SINUS2_RechercheSignataireACDCService" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="Policy.fcca3943-b653-40ac-8bad-49296c72319c" displayName="Policy For API cacheResultsGetPost[2.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.1840882b-13c0-4ba9-8eab-036aed7de41a</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.1be9152a-e9b4-454f-93de-c7296f10bae5</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.6d21d15d-bd1b-43ba-9201-fbaa67571c71</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.9d92791c-5607-4caa-9b1e-e6c7ee348d89</dependsOn>
+    </asset>
+    <asset name="PolicyAction.1be9152a-e9b4-454f-93de-c7296f10bae5" displayName="Policy Action [Service Result Cache] -&gt; Policy For API cacheResultsGetPost[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.1840882b-13c0-4ba9-8eab-036aed7de41a" displayName="Policy Action [Response Transformation] -&gt; Policy For API cacheResultsGetPost[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.passwordExpiry" displayName="passwordExpiry" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AccessControlList.785bc798-f4ee-4361-b0a2-41547e1526cf" displayName="AccessControlList for asset : TryAPI" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.d8c307f0-7c0a-4aae-9a60-a16c3fdfe59e</dependsOn>
+    </asset>
+    <asset name="AccessProfile.d8c307f0-7c0a-4aae-9a60-a16c3fdfe59e" displayName="Test" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+    </asset>
+    <asset name="API.9bc63b57-3347-4fe6-8302-2eb2c67b3b36" displayName="generateID[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.63f478d8-f1e8-4804-baf4-8ff8f21b2196</dependsOn>
+        <dependsOn>APIGateway:Policy.e917f9af-f058-4a89-b5e9-15f3c0f7bc78</dependsOn>
+    </asset>
+    <asset name="Policy.e917f9af-f058-4a89-b5e9-15f3c0f7bc78" displayName="Policy For API generateID[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.7855f925-864f-42b1-8bf1-05e189362d16</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.a32e58ea-cd1b-4cf4-b718-bfbc4715a896</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.cb8d7637-6ef2-4036-a09b-6c021b23492f</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.cebb9e86-9b49-43e0-b3d6-33e728a421b5</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.ffd693bb-1fe2-481e-9e8b-68b1571ffca4</dependsOn>
+    </asset>
+    <asset name="PolicyAction.ffd693bb-1fe2-481e-9e8b-68b1571ffca4" displayName="Policy Action [Request Transformation] -&gt; Policy For API generateID[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.7855f925-864f-42b1-8bf1-05e189362d16" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API generateID[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.cb8d7637-6ef2-4036-a09b-6c021b23492f" displayName="Policy Action [Response Transformation] -&gt; Policy For API generateID[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AccessControlList.63f478d8-f1e8-4804-baf4-8ff8f21b2196" displayName="AccessControlList for asset : generateID" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="Group.API-Gateway-Providers" displayName="API-Gateway-Providers" isDeployable="true">
+        <implementation.generic type="Group"/>
+    </asset>
+    <asset name="AccessProfile.API-Gateway-Providers" displayName="API-Gateway-Providers" isDeployable="true">
+        <implementation.generic type="AccessProfile"/>
+    </asset>
+    <asset name="AdministratorSetting.logConfig" displayName="logConfig" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="API.f1c924fe-2939-4694-bcb9-95ce588ea49f" displayName="cacheResultsGetPost[2.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.81f2a71c-191d-418a-a514-c961742c0434</dependsOn>
+        <dependsOn>APIGateway:Policy.fcca3943-b653-40ac-8bad-49296c72319c</dependsOn>
+    </asset>
+    <asset name="AccessControlList.81f2a71c-191d-418a-a514-c961742c0434" displayName="AccessControlList for asset : cacheResultsGetPost" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="UrlAlias.metrics" displayName="metrics" isDeployable="true">
+        <implementation.generic type="UrlAlias"/>
+    </asset>
+    <asset name="AdministratorSetting.ldapConfig" displayName="LDAP Config" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="API.e26669cd-af20-4109-947a-d809d6854133" displayName="genID[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.9c37c03f-2c16-42ae-bb98-623d2b019db2</dependsOn>
+        <dependsOn>APIGateway:Policy.e13b2ed2-3e0b-4e9a-9e68-389effff34a9</dependsOn>
+    </asset>
+    <asset name="Policy.e13b2ed2-3e0b-4e9a-9e68-389effff34a9" displayName="Policy For API genID[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.01a5af94-b447-40b7-a2b7-563600b1442d</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.d1339647-a036-47f0-bf3b-5c78060b4e2f</dependsOn>
+    </asset>
+    <asset name="PolicyAction.d1339647-a036-47f0-bf3b-5c78060b4e2f" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API genID[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.01a5af94-b447-40b7-a2b7-563600b1442d" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API genID[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.cache" displayName="cache" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="PolicyAction.03f9b96a-fc97-4f83-bea5-00c484b14bfb" displayName="Policy Action [Context-based Routing] -&gt; Policy For API LabCaseTestService_APIG[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.a7a74b81-3917-4b38-8fb5-03e265fb2294</dependsOn>
+        <dependsOn>APIGateway:Alias.fe1d5c3c-e02a-11e7-9d18-d9340e1d9bce</dependsOn>
+    </asset>
+    <asset name="Alias.a7a74b81-3917-4b38-8fb5-03e265fb2294" displayName="LabCaseProjectId" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="value for Simple alias LabCaseProjectId" many="false" isSecure="false" displayName="value for Simple alias LabCaseProjectId">
+            <value>7403</value>
+        </property>
+    </asset>
+    <asset name="Alias.fe1d5c3c-e02a-11e7-9d18-d9340e1d9bce" displayName="LabCaseEndpointAlias" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="Endpoint URI for Endpoint alias LabCaseEndpointAlias" many="false" isSecure="false" displayName="Endpoint URI for Endpoint alias LabCaseEndpointAlias">
+            <value>https://labcase.softwareag.com</value>
+        </property>
+        <property name="Optimization technique for Endpoint alias LabCaseEndpointAlias" many="false" isSecure="false" displayName="Optimization technique for Endpoint alias LabCaseEndpointAlias">
+            <value>None</value>
+        </property>
+        <property name="Connection timeout for Endpoint alias LabCaseEndpointAlias" many="false" isSecure="false" displayName="Connection timeout for Endpoint alias LabCaseEndpointAlias">
+            <value>0</value>
+        </property>
+        <property name="Read timeout for Endpoint alias LabCaseEndpointAlias" many="false" isSecure="false" displayName="Read timeout for Endpoint alias LabCaseEndpointAlias">
+            <value>0</value>
+        </property>
+        <property name="Pass WS-Security Headers for Endpoint alias LabCaseEndpointAlias" many="false" isSecure="false" displayName="Pass WS-Security Headers for Endpoint alias LabCaseEndpointAlias">
+            <value>false</value>
+        </property>
+    </asset>
+    <asset name="PolicyAction.dd6dd09d-d731-4245-8f4e-18c663318d6c" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API petStoreSOAP[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="JmsConnectionAlias.PE_NONTRANSACTIONAL_ALIAS" displayName="PE_NONTRANSACTIONAL_ALIAS" isDeployable="true">
+        <implementation.generic type="JmsConnectionAlias"/>
+        <dependsOn>APIGateway:JndiProviderAlias.DEFAULT_IS_JNDI_PROVIDER</dependsOn>
+    </asset>
+    <asset name="Keystore.DEFAULT_IS_KEYSTORE" displayName="DEFAULT_IS_KEYSTORE" isDeployable="true">
+        <implementation.generic type="Keystore"/>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE</dependsOn>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE.ssos</dependsOn>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE" displayName="wm.security.keystore.DEFAULT_IS_KEYSTORE" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.DEFAULT_IS_KEYSTORE.ssos" displayName="wm.security.keystore.DEFAULT_IS_KEYSTORE.ssos" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="API.e23311a8-4e81-47ab-84bc-386754fe2a48" displayName="createEmpData[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.a96187f1-efdf-4dd9-8eed-7bc87e0be4b3</dependsOn>
+        <dependsOn>APIGateway:Policy.1a598590-c99c-4bc2-a69f-e878e8aee037</dependsOn>
+    </asset>
+    <asset name="AccessControlList.a96187f1-efdf-4dd9-8eed-7bc87e0be4b3" displayName="AccessControlList for asset : createEmpData" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="AdministratorSetting.HTTPGlobalIPAccessMode" displayName="HTTPGlobalIPAccessMode" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.mobileApp" displayName="mobileApp" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPSListener@5556" displayName="HTTPSListener@5556" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+        <dependsOn>APIGateway:Keystore.DEFAULT_IS_KEYSTORE</dependsOn>
+        <dependsOn>APIGateway:Truststore.DEFAULT_IS_TRUSTSTORE</dependsOn>
+    </asset>
+    <asset name="UrlAlias.health" displayName="health" isDeployable="true">
+        <implementation.generic type="UrlAlias"/>
+    </asset>
+    <asset name="AccessControlList.2f74182a-43bf-4d85-b4b4-fde972d9e2ff" displayName="AccessControlList for asset : addTwoRestTrnformation" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="Policy.15c2caa8-004c-43e1-8b7f-6546902ccaf8" displayName="Policy For API createEmpData[2.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.03cd438a-7e02-4a41-b8b5-5979d4631fbe</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.7add1d6b-7c3d-4ba4-8f5b-3cca0c0ab33e</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.967e836f-cfcb-4ed8-9a79-df080b71a0aa</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.979750a9-c82c-4d32-b727-908671e64e16</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.a9b8e344-35a4-4e3b-93a3-5a2fe2b29bc0</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.e8e19bc3-3055-41a9-ae14-afa4dae039f5</dependsOn>
+    </asset>
+    <asset name="PolicyAction.03cd438a-7e02-4a41-b8b5-5979d4631fbe" displayName="Policy Action [Service Result Cache] -&gt; Policy For API createEmpData[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.e8e19bc3-3055-41a9-ae14-afa4dae039f5" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API createEmpData[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.a9b8e344-35a4-4e3b-93a3-5a2fe2b29bc0" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API createEmpData[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.979750a9-c82c-4d32-b727-908671e64e16" displayName="Policy Action [Response Transformation] -&gt; Policy For API createEmpData[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.967e836f-cfcb-4ed8-9a79-df080b71a0aa" displayName="Policy Action [Response Transformation] -&gt; Policy For API createEmpData[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.82e2c079-90e9-4877-9d00-d8cbe2ff54bf" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API LabCaseTestService_APIG[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="API.d44f0300-1de0-4d55-a461-bd923192087d" displayName="addTwoRestTrnformation[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.2f74182a-43bf-4d85-b4b4-fde972d9e2ff</dependsOn>
+        <dependsOn>APIGateway:Policy.d7da25f9-0f8d-4da9-b655-2c2c15d4e3d7</dependsOn>
+    </asset>
+    <asset name="Policy.3f7736da-7f7e-4ddb-8438-af3a1fbc0883" displayName="Policy For API LabCaseTestService_APIG[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.03f00a0d-0b38-4aa3-a8ca-8a48d4af07dd</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.03f9b96a-fc97-4f83-bea5-00c484b14bfb</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.81af11f2-3d34-456a-a4fc-73b2d10afc49</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.82e2c079-90e9-4877-9d00-d8cbe2ff54bf</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.99bd326b-3344-4588-8485-f37d22d34d56</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.b3c314e9-86e5-4542-bef2-891792bbbcd2</dependsOn>
+    </asset>
+    <asset name="PolicyAction.81af11f2-3d34-456a-a4fc-73b2d10afc49" displayName="Policy Action [Request Transformation] -&gt; Policy For API LabCaseTestService_APIG[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.7011f00c-e01a-11e7-9d18-c3cb04029276</dependsOn>
+    </asset>
+    <asset name="Alias.7011f00c-e01a-11e7-9d18-c3cb04029276" displayName="SetProjectIdTransformationAlias" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="File Name for Transformation alias SetProjectIdTransformationAlias" many="false" isSecure="false" displayName="File Name for Transformation alias SetProjectIdTransformationAlias">
+            <value>setProjectId-DEV.xsl</value>
+        </property>
+        <property name="File Content for Transformation alias SetProjectIdTransformationAlias" many="false" isSecure="false" displayName="File Content for Transformation alias SetProjectIdTransformationAlias">
+            <value>&lt;xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:tns="http://namespaces.INT.com/wsdl" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pg="http://softwareag.mediator.com/issues.json"&gt;
+    &lt;!-- GET Request, WSStack --&gt;
+	&lt;!-- Add project_id 7403 under GET_Issues, removing all existing project_id's --&gt;
+	&lt;xsl:template match="/soapenv:Envelope/soapenv:Body/tns:GET_Issues"&gt;
+		&lt;tns:GET_Issues&gt;
+			&lt;xsl:call-template name="copy-children"/&gt;
+			&lt;project_id xmlns=""&gt;7403&lt;/project_id&gt;
+		&lt;/tns:GET_Issues&gt;
+	&lt;/xsl:template&gt;
+	
+    &lt;!-- GET Request, Axis-free --&gt;
+	&lt;!-- Add project_id 7403 under pg:issues.json, removing all existing project_id's --&gt;
+	&lt;xsl:template match="/pg:issues.json"&gt;
+		&lt;pg:issues.json&gt;
+			&lt;xsl:call-template name="copy-children"/&gt;
+			&lt;project_id&gt;7403&lt;/project_id&gt;
+		&lt;/pg:issues.json&gt;
+	&lt;/xsl:template&gt;
+	
+    &lt;!-- POST Request, WSStack, Axis-free --&gt;
+	&lt;!-- Add project_id 7403 under issue, removing all existing project_id's --&gt;
+	&lt;xsl:template match="//issue"&gt;
+		&lt;issue xmlns=""&gt;
+			&lt;xsl:call-template name="copy-children"/&gt;
+			&lt;project_id&gt;7403&lt;/project_id&gt;
+		&lt;/issue&gt;
+	&lt;/xsl:template&gt;
+	
+	&lt;!--  Copy the children of the current node except for project_id --&gt;
+	&lt;xsl:template name="copy-children"&gt;
+		&lt;xsl:copy-of select="./*[name()!='project_id']"/&gt;
+	&lt;/xsl:template&gt;
+	
+	&lt;!-- standard copy template --&gt;
+	&lt;xsl:template match="@*|node()"&gt;
+		&lt;xsl:copy&gt;
+			&lt;xsl:apply-templates select="@*"/&gt;
+			&lt;xsl:apply-templates/&gt;
+		&lt;/xsl:copy&gt;
+	&lt;/xsl:template&gt;	
+&lt;/xsl:stylesheet&gt;</value>
+        </property>
+    </asset>
+    <asset name="PolicyAction.03f00a0d-0b38-4aa3-a8ca-8a48d4af07dd" displayName="Policy Action [Request Transformation] -&gt; Policy For API LabCaseTestService_APIG[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.99bd326b-3344-4588-8485-f37d22d34d56" displayName="Policy Action [Outbound Authentication - Transport] -&gt; Policy For API LabCaseTestService_APIG[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Alias.b73a8400-e008-11e7-9d18-f5832492b6de</dependsOn>
+    </asset>
+    <asset name="PolicyAction.b3c314e9-86e5-4542-bef2-891792bbbcd2" displayName="Policy Action [Log Invocation] -&gt; Policy For API LabCaseTestService_APIG[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.settings" displayName="settings" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="ProxyBypass.proxyBypass" displayName="proxyBypass" isDeployable="true">
+        <implementation.generic type="ProxyBypass"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@9999" displayName="HTTPListener@9999" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Application.4679b1ec-8979-44f2-a5ef-d93180d24a2b" displayName="JWT_Access" isDeployable="true">
+        <implementation.generic type="Application"/>
+        <dependsOn>APIGateway:API.58231e70-52aa-466e-a7c6-77050d0df050</dependsOn>
+        <dependsOn>APIGateway:AccessControlList.594f1b56-684d-411c-a4eb-3112805c325c</dependsOn>
+        <dependsOn>APIGateway:PassmanData.API_ACCESS_KEY4679b1ec-8979-44f2-a5ef-d93180d24a2b</dependsOn>
+        <dependsOn>APIGateway:RegisteredApplication.4679b1ec-8979-44f2-a5ef-d93180d24a2b</dependsOn>
+        <dependsOn>APIGateway:Strategy.431181ac-aca2-42a7-b025-08f28df52e46</dependsOn>
+    </asset>
+    <asset name="API.58231e70-52aa-466e-a7c6-77050d0df050" displayName="createEmpData[2.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.6f885f86-7f3c-4e08-a398-17b9ac60be38</dependsOn>
+        <dependsOn>APIGateway:Application.4679b1ec-8979-44f2-a5ef-d93180d24a2b</dependsOn>
+        <dependsOn>APIGateway:Policy.15c2caa8-004c-43e1-8b7f-6546902ccaf8</dependsOn>
+    </asset>
+    <asset name="AccessControlList.6f885f86-7f3c-4e08-a398-17b9ac60be38" displayName="AccessControlList for asset : createEmpData" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="PassmanData.API_ACCESS_KEY4679b1ec-8979-44f2-a5ef-d93180d24a2b" displayName="API_ACCESS_KEY4679b1ec-8979-44f2-a5ef-d93180d24a2b" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="Strategy.431181ac-aca2-42a7-b025-08f28df52e46" displayName="JWT_Access289627ea-9634-4929-a105-cdd1e7497ebf-$sys-default-oauth" isDeployable="true">
+        <implementation.generic type="Strategy"/>
+        <dependsOn>APIGateway:PassmanData.8b923c62-0142-4cfd-8c54-2be233e49f52-clientSecret</dependsOn>
+    </asset>
+    <asset name="PassmanData.8b923c62-0142-4cfd-8c54-2be233e49f52-clientSecret" displayName="8b923c62-0142-4cfd-8c54-2be233e49f52-clientSecret" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="RegisteredApplication.4679b1ec-8979-44f2-a5ef-d93180d24a2b" displayName="RegisteredApplication [ JWT_Access ]" isDeployable="true">
+        <implementation.generic type="RegisteredApplication"/>
+    </asset>
+    <asset name="AdministratorSetting.keystore" displayName="Keystore/Truststore" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+        <dependsOn>APIGateway:Keystore.DEFAULT_IS_KEYSTORE</dependsOn>
+        <dependsOn>APIGateway:Truststore.DEFAULT_IS_TRUSTSTORE</dependsOn>
+    </asset>
+    <asset name="Policy.adb0585d-8b3d-4af1-9415-4f337e757edb" displayName="Policy For API LabCaseTestService_APIG[1.0] Scope [READ]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+    </asset>
+    <asset name="ApprovalConfiguration.createApplication" displayName="createApplication" isDeployable="true">
+        <implementation.generic type="ApprovalConfiguration"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+    </asset>
+    <asset name="Policy.ca2389b4-6c8b-470d-97b9-a37e15b45752" displayName="Policy For API TryAPI[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.1e6c916d-cf06-44ac-bfe3-f6a683dbe6ff</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.56be2d83-869e-40bf-b354-e2829b3f6baf</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.85bc0736-f92c-453e-894c-ab46e563c6ec</dependsOn>
+    </asset>
+    <asset name="PolicyAction.1e6c916d-cf06-44ac-bfe3-f6a683dbe6ff" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API TryAPI[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.56be2d83-869e-40bf-b354-e2829b3f6baf" displayName="Policy Action [Enable HTTP / HTTPS] -&gt; Policy For API TryAPI[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.misc" displayName="Configuration Miscellaneous" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="API.f30aeba3-3d46-4d1b-97f6-273aa72c24e8" displayName="petStoreSOAP[2.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.877411c9-63fe-480d-a4ce-d1b120271257</dependsOn>
+        <dependsOn>APIGateway:Policy.3245ea9a-c203-4055-ac26-17f29ab32c58</dependsOn>
+    </asset>
+    <asset name="Policy.3245ea9a-c203-4055-ac26-17f29ab32c58" displayName="Policy For API petStoreSOAP[2.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.79a71620-3405-421d-af45-ec4e977910eb</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.dd6dd09d-d731-4245-8f4e-18c663318d6c</dependsOn>
+    </asset>
+    <asset name="Alias.local" displayName="local" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <dependsOn>APIGateway:Keystore.DEFAULT_IS_KEYSTORE</dependsOn>
+    </asset>
+    <asset name="Alias.0a61cfa6-1dd0-40a1-bd91-81704687e757" displayName="LabCaseProjectId" isDeployable="true">
+        <implementation.generic type="Alias"/>
+        <property name="value for Simple alias LabCaseProjectId" many="false" isSecure="false" displayName="value for Simple alias LabCaseProjectId">
+            <value>Test Target 5555</value>
+        </property>
+    </asset>
+    <asset name="Policy.edae622d-b045-41eb-b374-0f7be3b68bad" displayName="Policy For API LabCaseTestService_APIG[1.0] Scope [WRITE]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.9ce722b9-84f2-47fd-bd3d-bb097c3bffba</dependsOn>
+    </asset>
+    <asset name="API.da40e9b9-3cf3-4d2c-af22-f35b7291b2e3" displayName="LabCaseTestService_APIG[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.60598dff-af81-465d-8475-7ebdf66fcf86</dependsOn>
+        <dependsOn>APIGateway:Policy.3f7736da-7f7e-4ddb-8438-af3a1fbc0883</dependsOn>
+        <dependsOn>APIGateway:Policy.adb0585d-8b3d-4af1-9415-4f337e757edb</dependsOn>
+        <dependsOn>APIGateway:Policy.edae622d-b045-41eb-b374-0f7be3b68bad</dependsOn>
+    </asset>
+    <asset name="AccessControlList.60598dff-af81-465d-8475-7ebdf66fcf86" displayName="AccessControlList for asset : LabCaseTestService_APIG" isDeployable="true">
+        <implementation.generic type="AccessControlList"/>
+        <dependsOn>APIGateway:AccessProfile.Administrators</dependsOn>
+        <dependsOn>APIGateway:AccessProfile.Default</dependsOn>
+    </asset>
+    <asset name="Keystore.APIGatewayKeystore" displayName="APIGatewayKeystore" isDeployable="true">
+        <implementation.generic type="Keystore"/>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.APIGatewayKeystore</dependsOn>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.APIGatewayKeystore.partner1</dependsOn>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.APIGatewayKeystore.partner2</dependsOn>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.APIGatewayKeystore.policygateway</dependsOn>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.APIGatewayKeystore" displayName="wm.security.keystore.APIGatewayKeystore" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.APIGatewayKeystore.partner1" displayName="wm.security.keystore.APIGatewayKeystore.partner1" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.APIGatewayKeystore.partner2" displayName="wm.security.keystore.APIGatewayKeystore.partner2" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.APIGatewayKeystore.policygateway" displayName="wm.security.keystore.APIGatewayKeystore.policygateway" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="AdministratorSetting.emailDestinationConfig" displayName="Email" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+        <dependsOn>APIGateway:PassmanData.gateway.destination.email.handle</dependsOn>
+    </asset>
+    <asset name="PassmanData.gateway.destination.email.handle" displayName="gateway.destination.email.handle" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="Alias.PingFederate" displayName="PingFederate" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="API.e98303fa-92b1-41f9-8b9d-3bd567b85dd7" displayName="TryAPI[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.785bc798-f4ee-4361-b0a2-41547e1526cf</dependsOn>
+        <dependsOn>APIGateway:Policy.ca2389b4-6c8b-470d-97b9-a37e15b45752</dependsOn>
+    </asset>
+    <asset name="PolicyAction.1eab0e21-2a2c-4ed3-b79b-77f3e0bbc043" displayName="Custom Extension" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@5555" displayName="HTTPListener@5555" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPSListener@5483" displayName="HTTPSListener@5483" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Truststore.APIGatewayTruststore" displayName="APIGatewayTruststore" isDeployable="true">
+        <implementation.generic type="Truststore"/>
+        <dependsOn>APIGateway:PassmanData.wm.security.keystore.APIGatewayTruststore</dependsOn>
+    </asset>
+    <asset name="PassmanData.wm.security.keystore.APIGatewayTruststore" displayName="wm.security.keystore.APIGatewayTruststore" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="Alias.EurekaDefault" displayName="EurekaDefault" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="AdministratorSetting.dashboard" displayName="Configuration Dashboard setting" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="API.1e553067-e277-48e8-8ae9-556f444093db" displayName="SINUS2_RechercheSignataireACDCService[1.0.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:AccessControlList.cbd5b424-4520-4914-bd52-0f475b075522</dependsOn>
+        <dependsOn>APIGateway:Policy.a09439f1-9d3a-4f2b-a183-d9dce826ba84</dependsOn>
+    </asset>
+</asset_composite>

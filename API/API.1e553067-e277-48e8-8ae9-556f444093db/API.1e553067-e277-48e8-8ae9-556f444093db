@@ -1,0 +1,281 @@
+{
+  "apiDefinition" : {
+    "wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:ns0=\"http://signataireACDC.services.legalsuite.com/xsd\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:ns1=\"http://org.apache.axis2/xsd\" xmlns:axis2=\"http://signataireACDC.services.legalsuite.com\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" targetNamespace=\"http://signataireACDC.services.legalsuite.com\"><wsdl:documentation>\n\t\tRecherche et affichage de la liste des pouvoirs valides pour un groupe de gestion\n\t</wsdl:documentation><wsdl:types><xs:schema xmlns:ns=\"http://signataireACDC.services.legalsuite.com/xsd\" attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://signataireACDC.services.legalsuite.com/xsd\">\n<xs:element name=\"findSignatairesInDB\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"numeroSignataire\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"codeInterne\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"codeTypCptExclus\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n<xs:element name=\"findSignatairesInDBResponse\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"return\" nillable=\"true\" type=\"ns:SignataireSynthese\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n<xs:element name=\"SignataireSynthese\" type=\"ns:SignataireSynthese\"/>\n<xs:complexType name=\"SignataireSynthese\">\n<xs:sequence>\n<xs:element maxOccurs=\"unbounded\" name=\"signataire\" nillable=\"true\" type=\"ns:Signataire\"/>\n</xs:sequence>\n</xs:complexType>\n<xs:element name=\"Signataire\" type=\"ns:Signataire\"/>\n<xs:complexType name=\"Signataire\">\n<xs:sequence>\n<xs:element name=\"comptesValides\" nillable=\"true\" type=\"ns:ComptesValides\"/>\n<xs:element name=\"dateDebutValidité\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"dateFinValidité\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"dateMAJ\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"dateNaissance\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"email\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"fonction\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"lieuNaissance\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"noFiche\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"nom\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"nomUsage\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"paysNaissance\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"prenom\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"telephone\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n<xs:element name=\"ComptesValides\" type=\"ns:ComptesValides\"/>\n<xs:complexType name=\"ComptesValides\">\n<xs:sequence>\n<xs:element maxOccurs=\"unbounded\" name=\"compteValide\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n<xs:element name=\"rechercheSignataireACDC\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"numeroSignataire\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"codeInterne\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"codeTypCptExclus\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n<xs:element name=\"rechercheSignataireACDCResponse\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"return\" nillable=\"true\" type=\"ns:SignataireSynthese\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n<xs:element name=\"isAliveResponse\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"return\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n</xs:schema></wsdl:types><wsdl:message name=\"isAliveMessage\"/><wsdl:message name=\"isAliveResponse\"><wsdl:part name=\"part1\" element=\"ns0:isAliveResponse\"/></wsdl:message><wsdl:message name=\"rechercheSignataireACDCMessage\"><wsdl:part name=\"part1\" element=\"ns0:rechercheSignataireACDC\"/></wsdl:message><wsdl:message name=\"rechercheSignataireACDCResponse\"><wsdl:part name=\"part1\" element=\"ns0:rechercheSignataireACDCResponse\"/></wsdl:message><wsdl:message name=\"findSignatairesInDBMessage\"><wsdl:part name=\"part1\" element=\"ns0:findSignatairesInDB\"/></wsdl:message><wsdl:message name=\"findSignatairesInDBResponse\"><wsdl:part name=\"part1\" element=\"ns0:findSignatairesInDBResponse\"/></wsdl:message><wsdl:portType name=\"RechercheSignataireACDCServicePortType\"><wsdl:operation name=\"isAlive\"><wsdl:input xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" message=\"axis2:isAliveMessage\" wsaw:Action=\"urn:isAlive\"/><wsdl:output message=\"axis2:isAliveResponse\"/></wsdl:operation><wsdl:operation name=\"rechercheSignataireACDC\"><wsdl:input xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" message=\"axis2:rechercheSignataireACDCMessage\" wsaw:Action=\"urn:rechercheSignataireACDC\"/><wsdl:output message=\"axis2:rechercheSignataireACDCResponse\"/></wsdl:operation><wsdl:operation name=\"findSignatairesInDB\"><wsdl:input xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" message=\"axis2:findSignatairesInDBMessage\" wsaw:Action=\"urn:findSignatairesInDB\"/><wsdl:output message=\"axis2:findSignatairesInDBResponse\"/></wsdl:operation></wsdl:portType><wsdl:binding name=\"RechercheSignataireACDCServiceSOAP11Binding\" type=\"axis2:RechercheSignataireACDCServicePortType\"><soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/><wsdl:operation name=\"isAlive\"><soap:operation soapAction=\"urn:isAlive\" style=\"document\"/><wsdl:input><soap:body use=\"literal\"/></wsdl:input><wsdl:output><soap:body use=\"literal\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"rechercheSignataireACDC\"><soap:operation soapAction=\"urn:rechercheSignataireACDC\" style=\"document\"/><wsdl:input><soap:body use=\"literal\"/></wsdl:input><wsdl:output><soap:body use=\"literal\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"findSignatairesInDB\"><soap:operation soapAction=\"urn:findSignatairesInDB\" style=\"document\"/><wsdl:input><soap:body use=\"literal\"/></wsdl:input><wsdl:output><soap:body use=\"literal\"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:binding name=\"RechercheSignataireACDCServiceSOAP12Binding\" type=\"axis2:RechercheSignataireACDCServicePortType\"><soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/><wsdl:operation name=\"isAlive\"><soap12:operation soapAction=\"urn:isAlive\" style=\"document\"/><wsdl:input><soap12:body use=\"literal\"/></wsdl:input><wsdl:output><soap12:body use=\"literal\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"rechercheSignataireACDC\"><soap12:operation soapAction=\"urn:rechercheSignataireACDC\" style=\"document\"/><wsdl:input><soap12:body use=\"literal\"/></wsdl:input><wsdl:output><soap12:body use=\"literal\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"findSignatairesInDB\"><soap12:operation soapAction=\"urn:findSignatairesInDB\" style=\"document\"/><wsdl:input><soap12:body use=\"literal\"/></wsdl:input><wsdl:output><soap12:body use=\"literal\"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:binding name=\"RechercheSignataireACDCServiceHttpBinding\" type=\"axis2:RechercheSignataireACDCServicePortType\"><http:binding verb=\"POST\"/><wsdl:operation name=\"isAlive\"><http:operation location=\"isAlive\"/><wsdl:input><mime:content type=\"text/xml\"/></wsdl:input><wsdl:output><mime:content type=\"text/xml\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"rechercheSignataireACDC\"><http:operation location=\"rechercheSignataireACDC\"/><wsdl:input><mime:content type=\"text/xml\"/></wsdl:input><wsdl:output><mime:content type=\"text/xml\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"findSignatairesInDB\"><http:operation location=\"findSignatairesInDB\"/><wsdl:input><mime:content type=\"text/xml\"/></wsdl:input><wsdl:output><mime:content type=\"text/xml\"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:service name=\"RechercheSignataireACDCService\"><wsdl:port name=\"RechercheSignataireACDCServiceSOAP11port_http\" binding=\"axis2:RechercheSignataireACDCServiceSOAP11Binding\"><soap:address location=\"http://10.239.67.121:8080/sinus2-web/services/RechercheSignataireACDCService\"/></wsdl:port><wsdl:port name=\"RechercheSignataireACDCServiceSOAP12port_http\" binding=\"axis2:RechercheSignataireACDCServiceSOAP12Binding\"><soap12:address location=\"http://10.239.67.121:8080/sinus2-web/services/RechercheSignataireACDCService\"/></wsdl:port><wsdl:port name=\"RechercheSignataireACDCServiceHttpport\" binding=\"axis2:RechercheSignataireACDCServiceHttpBinding\"><http:address location=\"http://10.239.67.121:8080/sinus2-web/services/RechercheSignataireACDCService\"/></wsdl:port></wsdl:service></wsdl:definitions>",
+    "baseWsdlUri" : "C:\\SoftwareAG\\IntegrationServer\\instances\\default\\temp\\1589438218253\\",
+    "nativeUri" : [ "http://10.239.67.121:8080/sinus2-web/services/RechercheSignataireACDCService" ],
+    "serviceName" : "SINUS2_RechercheSignataireACDCService",
+    "operationsInfo" : [ {
+      "name" : "rechercheSignataireACDC",
+      "namespace" : "http://signataireACDC.services.legalsuite.com",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "RechercheSignataireACDCServiceSOAP12Binding",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<xsd:rechercheSignataireACDC xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:numeroSignataire>string</xsd:numeroSignataire>\r\n  <xsd:codeInterne>string</xsd:codeInterne>\r\n  <xsd:codeTypCptExclus>string</xsd:codeTypCptExclus>\r\n</xsd:rechercheSignataireACDC>",
+        "outputMessage" : "<xsd:rechercheSignataireACDCResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>\r\n    <!--1 or more repetitions:-->\r\n    <xsd:signataire>\r\n      <xsd:comptesValides>\r\n        <!--1 or more repetitions:-->\r\n        <xsd:compteValide>string</xsd:compteValide>\r\n      </xsd:comptesValides>\r\n      <xsd:dateDebutValidité>string</xsd:dateDebutValidité>\r\n      <xsd:dateFinValidité>string</xsd:dateFinValidité>\r\n      <xsd:dateMAJ>string</xsd:dateMAJ>\r\n      <xsd:dateNaissance>string</xsd:dateNaissance>\r\n      <xsd:email>string</xsd:email>\r\n      <xsd:fonction>string</xsd:fonction>\r\n      <xsd:lieuNaissance>string</xsd:lieuNaissance>\r\n      <xsd:noFiche>string</xsd:noFiche>\r\n      <xsd:nom>string</xsd:nom>\r\n      <xsd:nomUsage>string</xsd:nomUsage>\r\n      <xsd:paysNaissance>string</xsd:paysNaissance>\r\n      <xsd:prenom>string</xsd:prenom>\r\n      <xsd:telephone>string</xsd:telephone>\r\n    </xsd:signataire>\r\n  </xsd:return>\r\n</xsd:rechercheSignataireACDCResponse>"
+      }, {
+        "name" : "RechercheSignataireACDCServiceSOAP11Binding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<xsd:rechercheSignataireACDC xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:numeroSignataire>string</xsd:numeroSignataire>\r\n  <xsd:codeInterne>string</xsd:codeInterne>\r\n  <xsd:codeTypCptExclus>string</xsd:codeTypCptExclus>\r\n</xsd:rechercheSignataireACDC>",
+        "outputMessage" : "<xsd:rechercheSignataireACDCResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>\r\n    <!--1 or more repetitions:-->\r\n    <xsd:signataire>\r\n      <xsd:comptesValides>\r\n        <!--1 or more repetitions:-->\r\n        <xsd:compteValide>string</xsd:compteValide>\r\n      </xsd:comptesValides>\r\n      <xsd:dateDebutValidité>string</xsd:dateDebutValidité>\r\n      <xsd:dateFinValidité>string</xsd:dateFinValidité>\r\n      <xsd:dateMAJ>string</xsd:dateMAJ>\r\n      <xsd:dateNaissance>string</xsd:dateNaissance>\r\n      <xsd:email>string</xsd:email>\r\n      <xsd:fonction>string</xsd:fonction>\r\n      <xsd:lieuNaissance>string</xsd:lieuNaissance>\r\n      <xsd:noFiche>string</xsd:noFiche>\r\n      <xsd:nom>string</xsd:nom>\r\n      <xsd:nomUsage>string</xsd:nomUsage>\r\n      <xsd:paysNaissance>string</xsd:paysNaissance>\r\n      <xsd:prenom>string</xsd:prenom>\r\n      <xsd:telephone>string</xsd:telephone>\r\n    </xsd:signataire>\r\n  </xsd:return>\r\n</xsd:rechercheSignataireACDCResponse>"
+      }, {
+        "name" : "RechercheSignataireACDCServiceHttpBinding",
+        "type" : "http",
+        "specifier" : "POST",
+        "inputMessage" : "<xsd:rechercheSignataireACDC xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:numeroSignataire>string</xsd:numeroSignataire>\r\n  <xsd:codeInterne>string</xsd:codeInterne>\r\n  <xsd:codeTypCptExclus>string</xsd:codeTypCptExclus>\r\n</xsd:rechercheSignataireACDC>",
+        "outputMessage" : "<xsd:rechercheSignataireACDCResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>\r\n    <!--1 or more repetitions:-->\r\n    <xsd:signataire>\r\n      <xsd:comptesValides>\r\n        <!--1 or more repetitions:-->\r\n        <xsd:compteValide>string</xsd:compteValide>\r\n      </xsd:comptesValides>\r\n      <xsd:dateDebutValidité>string</xsd:dateDebutValidité>\r\n      <xsd:dateFinValidité>string</xsd:dateFinValidité>\r\n      <xsd:dateMAJ>string</xsd:dateMAJ>\r\n      <xsd:dateNaissance>string</xsd:dateNaissance>\r\n      <xsd:email>string</xsd:email>\r\n      <xsd:fonction>string</xsd:fonction>\r\n      <xsd:lieuNaissance>string</xsd:lieuNaissance>\r\n      <xsd:noFiche>string</xsd:noFiche>\r\n      <xsd:nom>string</xsd:nom>\r\n      <xsd:nomUsage>string</xsd:nomUsage>\r\n      <xsd:paysNaissance>string</xsd:paysNaissance>\r\n      <xsd:prenom>string</xsd:prenom>\r\n      <xsd:telephone>string</xsd:telephone>\r\n    </xsd:signataire>\r\n  </xsd:return>\r\n</xsd:rechercheSignataireACDCResponse>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "urn:rechercheSignataireACDC",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{}"
+                  },
+                  "examples" : { },
+                  "example" : "<xsd:rechercheSignataireACDCResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>\r\n    <!--1 or more repetitions:-->\r\n    <xsd:signataire>\r\n      <xsd:comptesValides>\r\n        <!--1 or more repetitions:-->\r\n        <xsd:compteValide>string</xsd:compteValide>\r\n      </xsd:comptesValides>\r\n      <xsd:dateDebutValidité>string</xsd:dateDebutValidité>\r\n      <xsd:dateFinValidité>string</xsd:dateFinValidité>\r\n      <xsd:dateMAJ>string</xsd:dateMAJ>\r\n      <xsd:dateNaissance>string</xsd:dateNaissance>\r\n      <xsd:email>string</xsd:email>\r\n      <xsd:fonction>string</xsd:fonction>\r\n      <xsd:lieuNaissance>string</xsd:lieuNaissance>\r\n      <xsd:noFiche>string</xsd:noFiche>\r\n      <xsd:nom>string</xsd:nom>\r\n      <xsd:nomUsage>string</xsd:nomUsage>\r\n      <xsd:paysNaissance>string</xsd:paysNaissance>\r\n      <xsd:prenom>string</xsd:prenom>\r\n      <xsd:telephone>string</xsd:telephone>\r\n    </xsd:signataire>\r\n  </xsd:return>\r\n</xsd:rechercheSignataireACDCResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{}"
+                  },
+                  "examples" : { },
+                  "example" : "{\"rechercheSignataireACDCResponse\":{\"return\":{\"signataire\":{\"comptesValides\":{\"compteValide\":\"string\"},\"dateDebutValidité\":\"string\",\"dateFinValidité\":\"string\",\"dateMAJ\":\"string\",\"dateNaissance\":\"string\",\"email\":\"string\",\"fonction\":\"string\",\"lieuNaissance\":\"string\",\"noFiche\":\"string\",\"nom\":\"string\",\"nomUsage\":\"string\",\"paysNaissance\":\"string\",\"prenom\":\"string\",\"telephone\":\"string\"}}}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<xsd:rechercheSignataireACDC xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:numeroSignataire>string</xsd:numeroSignataire>\r\n  <xsd:codeInterne>string</xsd:codeInterne>\r\n  <xsd:codeTypCptExclus>string</xsd:codeTypCptExclus>\r\n</xsd:rechercheSignataireACDC>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"rechercheSignataireACDC\":{\"numeroSignataire\":\"string\",\"codeInterne\":\"string\",\"codeTypCptExclus\":\"string\"}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "rechercheSignataireACDC",
+        "invokePath" : "/rechercheSignataireACDC"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "findSignatairesInDB",
+      "namespace" : "http://signataireACDC.services.legalsuite.com",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "RechercheSignataireACDCServiceSOAP12Binding",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "<xsd:findSignatairesInDB xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:numeroSignataire>string</xsd:numeroSignataire>\r\n  <xsd:codeInterne>string</xsd:codeInterne>\r\n  <xsd:codeTypCptExclus>string</xsd:codeTypCptExclus>\r\n</xsd:findSignatairesInDB>",
+        "outputMessage" : "<xsd:findSignatairesInDBResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>\r\n    <!--1 or more repetitions:-->\r\n    <xsd:signataire>\r\n      <xsd:comptesValides>\r\n        <!--1 or more repetitions:-->\r\n        <xsd:compteValide>string</xsd:compteValide>\r\n      </xsd:comptesValides>\r\n      <xsd:dateDebutValidité>string</xsd:dateDebutValidité>\r\n      <xsd:dateFinValidité>string</xsd:dateFinValidité>\r\n      <xsd:dateMAJ>string</xsd:dateMAJ>\r\n      <xsd:dateNaissance>string</xsd:dateNaissance>\r\n      <xsd:email>string</xsd:email>\r\n      <xsd:fonction>string</xsd:fonction>\r\n      <xsd:lieuNaissance>string</xsd:lieuNaissance>\r\n      <xsd:noFiche>string</xsd:noFiche>\r\n      <xsd:nom>string</xsd:nom>\r\n      <xsd:nomUsage>string</xsd:nomUsage>\r\n      <xsd:paysNaissance>string</xsd:paysNaissance>\r\n      <xsd:prenom>string</xsd:prenom>\r\n      <xsd:telephone>string</xsd:telephone>\r\n    </xsd:signataire>\r\n  </xsd:return>\r\n</xsd:findSignatairesInDBResponse>"
+      }, {
+        "name" : "RechercheSignataireACDCServiceSOAP11Binding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<xsd:findSignatairesInDB xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:numeroSignataire>string</xsd:numeroSignataire>\r\n  <xsd:codeInterne>string</xsd:codeInterne>\r\n  <xsd:codeTypCptExclus>string</xsd:codeTypCptExclus>\r\n</xsd:findSignatairesInDB>",
+        "outputMessage" : "<xsd:findSignatairesInDBResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>\r\n    <!--1 or more repetitions:-->\r\n    <xsd:signataire>\r\n      <xsd:comptesValides>\r\n        <!--1 or more repetitions:-->\r\n        <xsd:compteValide>string</xsd:compteValide>\r\n      </xsd:comptesValides>\r\n      <xsd:dateDebutValidité>string</xsd:dateDebutValidité>\r\n      <xsd:dateFinValidité>string</xsd:dateFinValidité>\r\n      <xsd:dateMAJ>string</xsd:dateMAJ>\r\n      <xsd:dateNaissance>string</xsd:dateNaissance>\r\n      <xsd:email>string</xsd:email>\r\n      <xsd:fonction>string</xsd:fonction>\r\n      <xsd:lieuNaissance>string</xsd:lieuNaissance>\r\n      <xsd:noFiche>string</xsd:noFiche>\r\n      <xsd:nom>string</xsd:nom>\r\n      <xsd:nomUsage>string</xsd:nomUsage>\r\n      <xsd:paysNaissance>string</xsd:paysNaissance>\r\n      <xsd:prenom>string</xsd:prenom>\r\n      <xsd:telephone>string</xsd:telephone>\r\n    </xsd:signataire>\r\n  </xsd:return>\r\n</xsd:findSignatairesInDBResponse>"
+      }, {
+        "name" : "RechercheSignataireACDCServiceHttpBinding",
+        "type" : "http",
+        "specifier" : "POST",
+        "inputMessage" : "<xsd:findSignatairesInDB xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:numeroSignataire>string</xsd:numeroSignataire>\r\n  <xsd:codeInterne>string</xsd:codeInterne>\r\n  <xsd:codeTypCptExclus>string</xsd:codeTypCptExclus>\r\n</xsd:findSignatairesInDB>",
+        "outputMessage" : "<xsd:findSignatairesInDBResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>\r\n    <!--1 or more repetitions:-->\r\n    <xsd:signataire>\r\n      <xsd:comptesValides>\r\n        <!--1 or more repetitions:-->\r\n        <xsd:compteValide>string</xsd:compteValide>\r\n      </xsd:comptesValides>\r\n      <xsd:dateDebutValidité>string</xsd:dateDebutValidité>\r\n      <xsd:dateFinValidité>string</xsd:dateFinValidité>\r\n      <xsd:dateMAJ>string</xsd:dateMAJ>\r\n      <xsd:dateNaissance>string</xsd:dateNaissance>\r\n      <xsd:email>string</xsd:email>\r\n      <xsd:fonction>string</xsd:fonction>\r\n      <xsd:lieuNaissance>string</xsd:lieuNaissance>\r\n      <xsd:noFiche>string</xsd:noFiche>\r\n      <xsd:nom>string</xsd:nom>\r\n      <xsd:nomUsage>string</xsd:nomUsage>\r\n      <xsd:paysNaissance>string</xsd:paysNaissance>\r\n      <xsd:prenom>string</xsd:prenom>\r\n      <xsd:telephone>string</xsd:telephone>\r\n    </xsd:signataire>\r\n  </xsd:return>\r\n</xsd:findSignatairesInDBResponse>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "urn:findSignatairesInDB",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{}"
+                  },
+                  "examples" : { },
+                  "example" : "<xsd:findSignatairesInDBResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>\r\n    <!--1 or more repetitions:-->\r\n    <xsd:signataire>\r\n      <xsd:comptesValides>\r\n        <!--1 or more repetitions:-->\r\n        <xsd:compteValide>string</xsd:compteValide>\r\n      </xsd:comptesValides>\r\n      <xsd:dateDebutValidité>string</xsd:dateDebutValidité>\r\n      <xsd:dateFinValidité>string</xsd:dateFinValidité>\r\n      <xsd:dateMAJ>string</xsd:dateMAJ>\r\n      <xsd:dateNaissance>string</xsd:dateNaissance>\r\n      <xsd:email>string</xsd:email>\r\n      <xsd:fonction>string</xsd:fonction>\r\n      <xsd:lieuNaissance>string</xsd:lieuNaissance>\r\n      <xsd:noFiche>string</xsd:noFiche>\r\n      <xsd:nom>string</xsd:nom>\r\n      <xsd:nomUsage>string</xsd:nomUsage>\r\n      <xsd:paysNaissance>string</xsd:paysNaissance>\r\n      <xsd:prenom>string</xsd:prenom>\r\n      <xsd:telephone>string</xsd:telephone>\r\n    </xsd:signataire>\r\n  </xsd:return>\r\n</xsd:findSignatairesInDBResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{}"
+                  },
+                  "examples" : { },
+                  "example" : "{\"findSignatairesInDBResponse\":{\"return\":{\"signataire\":{\"comptesValides\":{\"compteValide\":\"string\"},\"dateDebutValidité\":\"string\",\"dateFinValidité\":\"string\",\"dateMAJ\":\"string\",\"dateNaissance\":\"string\",\"email\":\"string\",\"fonction\":\"string\",\"lieuNaissance\":\"string\",\"noFiche\":\"string\",\"nom\":\"string\",\"nomUsage\":\"string\",\"paysNaissance\":\"string\",\"prenom\":\"string\",\"telephone\":\"string\"}}}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<xsd:findSignatairesInDB xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:numeroSignataire>string</xsd:numeroSignataire>\r\n  <xsd:codeInterne>string</xsd:codeInterne>\r\n  <xsd:codeTypCptExclus>string</xsd:codeTypCptExclus>\r\n</xsd:findSignatairesInDB>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"findSignatairesInDB\":{\"numeroSignataire\":\"string\",\"codeInterne\":\"string\",\"codeTypCptExclus\":\"string\"}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "findSignatairesInDB",
+        "invokePath" : "/findSignatairesInDB"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    }, {
+      "name" : "isAlive",
+      "namespace" : "http://signataireACDC.services.legalsuite.com",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "RechercheSignataireACDCServiceSOAP12Binding",
+        "type" : "soap12",
+        "specifier" : "",
+        "inputMessage" : "",
+        "outputMessage" : "<xsd:isAliveResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>string</xsd:return>\r\n</xsd:isAliveResponse>"
+      }, {
+        "name" : "RechercheSignataireACDCServiceSOAP11Binding",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "",
+        "outputMessage" : "<xsd:isAliveResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>string</xsd:return>\r\n</xsd:isAliveResponse>"
+      }, {
+        "name" : "RechercheSignataireACDCServiceHttpBinding",
+        "type" : "http",
+        "specifier" : "POST",
+        "inputMessage" : "",
+        "outputMessage" : "<xsd:isAliveResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>string</xsd:return>\r\n</xsd:isAliveResponse>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "urn:isAlive",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{}"
+                  },
+                  "examples" : { },
+                  "example" : "<xsd:isAliveResponse xmlns:xsd=\"http://signataireACDC.services.legalsuite.com/xsd\">\r\n  <xsd:return>string</xsd:return>\r\n</xsd:isAliveResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{}"
+                  },
+                  "examples" : { },
+                  "example" : "{\"isAliveResponse\":{\"return\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { }
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "isAlive",
+        "invokePath" : "/isAlive"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    } ],
+    "type" : "soap",
+    "serviceRegistryDisplayName" : "SINUS2_RechercheSignataireACDCService_1.0.0",
+    "operationPolicies" : {
+      "isAlive" : "",
+      "rechercheSignataireACDC" : "",
+      "findSignatairesInDB" : ""
+    },
+    "isRESTInvokeEnabled" : false
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://10.239.67.121:8080/sinus2-web/services/RechercheSignataireACDCService",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "SINUS2_RechercheSignataireACDCService",
+  "apiVersion" : "1.0.0",
+  "apiDescription" : "Ce web service permet, à partir du n° de compte, de retourner les signataires disposant d’un pouvoir valide, ainsi que les comptes ouverts pour lesquels ils ont des pouvoirs valides.\nLa recherche est limitée aux comptes du groupe de gestion TOPAZE",
+  "maturityState" : "Test",
+  "isActive" : false,
+  "type" : "SOAP",
+  "owner" : "Administrator",
+  "policies" : [ "a09439f1-9d3a-4f2b-a183-d9dce826ba84" ],
+  "referencedFiles" : {
+    "SINUS2_RechercheSignataireACDCService_1_0_0.wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:ns0=\"http://signataireACDC.services.legalsuite.com/xsd\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:ns1=\"http://org.apache.axis2/xsd\" xmlns:axis2=\"http://signataireACDC.services.legalsuite.com\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" targetNamespace=\"http://signataireACDC.services.legalsuite.com\"><wsdl:documentation>\n\t\tRecherche et affichage de la liste des pouvoirs valides pour un groupe de gestion\n\t</wsdl:documentation><wsdl:types><xs:schema xmlns:ns=\"http://signataireACDC.services.legalsuite.com/xsd\" attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://signataireACDC.services.legalsuite.com/xsd\">\n<xs:element name=\"findSignatairesInDB\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"numeroSignataire\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"codeInterne\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"codeTypCptExclus\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n<xs:element name=\"findSignatairesInDBResponse\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"return\" nillable=\"true\" type=\"ns:SignataireSynthese\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n<xs:element name=\"SignataireSynthese\" type=\"ns:SignataireSynthese\"/>\n<xs:complexType name=\"SignataireSynthese\">\n<xs:sequence>\n<xs:element maxOccurs=\"unbounded\" name=\"signataire\" nillable=\"true\" type=\"ns:Signataire\"/>\n</xs:sequence>\n</xs:complexType>\n<xs:element name=\"Signataire\" type=\"ns:Signataire\"/>\n<xs:complexType name=\"Signataire\">\n<xs:sequence>\n<xs:element name=\"comptesValides\" nillable=\"true\" type=\"ns:ComptesValides\"/>\n<xs:element name=\"dateDebutValidité\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"dateFinValidité\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"dateMAJ\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"dateNaissance\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"email\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"fonction\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"lieuNaissance\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"noFiche\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"nom\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"nomUsage\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"paysNaissance\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"prenom\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"telephone\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n<xs:element name=\"ComptesValides\" type=\"ns:ComptesValides\"/>\n<xs:complexType name=\"ComptesValides\">\n<xs:sequence>\n<xs:element maxOccurs=\"unbounded\" name=\"compteValide\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n<xs:element name=\"rechercheSignataireACDC\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"numeroSignataire\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"codeInterne\" nillable=\"true\" type=\"xs:string\"/>\n<xs:element name=\"codeTypCptExclus\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n<xs:element name=\"rechercheSignataireACDCResponse\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"return\" nillable=\"true\" type=\"ns:SignataireSynthese\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n<xs:element name=\"isAliveResponse\">\n<xs:complexType>\n<xs:sequence>\n<xs:element name=\"return\" nillable=\"true\" type=\"xs:string\"/>\n</xs:sequence>\n</xs:complexType>\n</xs:element>\n</xs:schema></wsdl:types><wsdl:message name=\"isAliveMessage\"/><wsdl:message name=\"isAliveResponse\"><wsdl:part name=\"part1\" element=\"ns0:isAliveResponse\"/></wsdl:message><wsdl:message name=\"rechercheSignataireACDCMessage\"><wsdl:part name=\"part1\" element=\"ns0:rechercheSignataireACDC\"/></wsdl:message><wsdl:message name=\"rechercheSignataireACDCResponse\"><wsdl:part name=\"part1\" element=\"ns0:rechercheSignataireACDCResponse\"/></wsdl:message><wsdl:message name=\"findSignatairesInDBMessage\"><wsdl:part name=\"part1\" element=\"ns0:findSignatairesInDB\"/></wsdl:message><wsdl:message name=\"findSignatairesInDBResponse\"><wsdl:part name=\"part1\" element=\"ns0:findSignatairesInDBResponse\"/></wsdl:message><wsdl:portType name=\"RechercheSignataireACDCServicePortType\"><wsdl:operation name=\"isAlive\"><wsdl:input xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" message=\"axis2:isAliveMessage\" wsaw:Action=\"urn:isAlive\"/><wsdl:output message=\"axis2:isAliveResponse\"/></wsdl:operation><wsdl:operation name=\"rechercheSignataireACDC\"><wsdl:input xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" message=\"axis2:rechercheSignataireACDCMessage\" wsaw:Action=\"urn:rechercheSignataireACDC\"/><wsdl:output message=\"axis2:rechercheSignataireACDCResponse\"/></wsdl:operation><wsdl:operation name=\"findSignatairesInDB\"><wsdl:input xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" message=\"axis2:findSignatairesInDBMessage\" wsaw:Action=\"urn:findSignatairesInDB\"/><wsdl:output message=\"axis2:findSignatairesInDBResponse\"/></wsdl:operation></wsdl:portType><wsdl:binding name=\"RechercheSignataireACDCServiceSOAP11Binding\" type=\"axis2:RechercheSignataireACDCServicePortType\"><soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/><wsdl:operation name=\"isAlive\"><soap:operation soapAction=\"urn:isAlive\" style=\"document\"/><wsdl:input><soap:body use=\"literal\"/></wsdl:input><wsdl:output><soap:body use=\"literal\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"rechercheSignataireACDC\"><soap:operation soapAction=\"urn:rechercheSignataireACDC\" style=\"document\"/><wsdl:input><soap:body use=\"literal\"/></wsdl:input><wsdl:output><soap:body use=\"literal\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"findSignatairesInDB\"><soap:operation soapAction=\"urn:findSignatairesInDB\" style=\"document\"/><wsdl:input><soap:body use=\"literal\"/></wsdl:input><wsdl:output><soap:body use=\"literal\"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:binding name=\"RechercheSignataireACDCServiceSOAP12Binding\" type=\"axis2:RechercheSignataireACDCServicePortType\"><soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/><wsdl:operation name=\"isAlive\"><soap12:operation soapAction=\"urn:isAlive\" style=\"document\"/><wsdl:input><soap12:body use=\"literal\"/></wsdl:input><wsdl:output><soap12:body use=\"literal\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"rechercheSignataireACDC\"><soap12:operation soapAction=\"urn:rechercheSignataireACDC\" style=\"document\"/><wsdl:input><soap12:body use=\"literal\"/></wsdl:input><wsdl:output><soap12:body use=\"literal\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"findSignatairesInDB\"><soap12:operation soapAction=\"urn:findSignatairesInDB\" style=\"document\"/><wsdl:input><soap12:body use=\"literal\"/></wsdl:input><wsdl:output><soap12:body use=\"literal\"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:binding name=\"RechercheSignataireACDCServiceHttpBinding\" type=\"axis2:RechercheSignataireACDCServicePortType\"><http:binding verb=\"POST\"/><wsdl:operation name=\"isAlive\"><http:operation location=\"isAlive\"/><wsdl:input><mime:content type=\"text/xml\"/></wsdl:input><wsdl:output><mime:content type=\"text/xml\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"rechercheSignataireACDC\"><http:operation location=\"rechercheSignataireACDC\"/><wsdl:input><mime:content type=\"text/xml\"/></wsdl:input><wsdl:output><mime:content type=\"text/xml\"/></wsdl:output></wsdl:operation><wsdl:operation name=\"findSignatairesInDB\"><http:operation location=\"findSignatairesInDB\"/><wsdl:input><mime:content type=\"text/xml\"/></wsdl:input><wsdl:output><mime:content type=\"text/xml\"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:service name=\"RechercheSignataireACDCService\"><wsdl:port name=\"RechercheSignataireACDCServiceSOAP11port_http\" binding=\"axis2:RechercheSignataireACDCServiceSOAP11Binding\"><soap:address location=\"http://10.239.67.121:8080/sinus2-web/services/RechercheSignataireACDCService\"/></wsdl:port><wsdl:port name=\"RechercheSignataireACDCServiceSOAP12port_http\" binding=\"axis2:RechercheSignataireACDCServiceSOAP12Binding\"><soap12:address location=\"http://10.239.67.121:8080/sinus2-web/services/RechercheSignataireACDCService\"/></wsdl:port><wsdl:port name=\"RechercheSignataireACDCServiceHttpport\" binding=\"axis2:RechercheSignataireACDCServiceHttpBinding\"><http:address location=\"http://10.239.67.121:8080/sinus2-web/services/RechercheSignataireACDCService\"/></wsdl:port></wsdl:service></wsdl:definitions>"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-04 09:06:40 GMT",
+  "lastModified" : "2020-05-13 08:54:58 GMT",
+  "systemVersion" : 1,
+  "id" : "1e553067-e277-48e8-8ae9-556f444093db"
+}

@@ -1,0 +1,144 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "addCheck"
+    },
+    "host" : "daeitrain44459.eur.ad.sag:5555",
+    "basePath" : "/rad/ZApiTest.AddIntegers:new_rad",
+    "schemes" : [ "http" ],
+    "consumes" : [ "application/json" ],
+    "produces" : [ "application/json" ],
+    "security" : [ ],
+    "paths" : {
+      "/addChk" : {
+        "get" : {
+          "description" : "",
+          "operationId" : "addChk_GET_1",
+          "responses" : {
+            "200" : {
+              "description" : "OK",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/addChk_GET_response"
+                  }
+                }
+              }
+            },
+            "401" : {
+              "description" : "Access Denied"
+            }
+          },
+          "enabled" : true
+        },
+        "post" : {
+          "description" : "",
+          "operationId" : "addChk_POST_1",
+          "parameters" : [ ],
+          "responses" : {
+            "200" : {
+              "description" : "OK",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/addChk_POST_response"
+                  }
+                }
+              }
+            },
+            "401" : {
+              "description" : "Access Denied"
+            }
+          },
+          "enabled" : true,
+          "requestBody" : {
+            "description" : "",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/pri"
+                }
+              }
+            },
+            "required" : true
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://daeitrain44459.eur.ad.sag:5555/rad/ZApiTest.AddIntegers:new_rad"
+    } ],
+    "components" : {
+      "schemas" : {
+        "addChk_POST_response" : {
+          "required" : [ "resultInt" ],
+          "type" : "object",
+          "properties" : {
+            "resultInt" : {
+              "$ref" : "#/components/schemas/resultInt"
+            }
+          }
+        },
+        "addChk_GET_response" : {
+          "required" : [ "resultInt" ],
+          "type" : "object",
+          "properties" : {
+            "resultInt" : {
+              "$ref" : "#/components/schemas/resultInt"
+            }
+          }
+        },
+        "pri" : {
+          "required" : [ "a1", "a2" ],
+          "type" : "object",
+          "properties" : {
+            "a1" : {
+              "type" : "string"
+            },
+            "a2" : {
+              "type" : "string"
+            }
+          }
+        },
+        "resultInt" : {
+          "required" : [ "r1" ],
+          "type" : "object",
+          "properties" : {
+            "r1" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://daeitrain44459.eur.ad.sag:5555/rad/ZApiTest.AddIntegers:new_rad",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "addTwoRestTrnformation",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : false,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "d7da25f9-0f8d-4da9-b655-2c2c15d4e3d7" ],
+  "referencedFiles" : {
+    "addInt.json" : "---\r\nswagger: \"2.0\"\r\ninfo:\r\n  version: \"1.0\"\r\n  title: \"addCheck\"\r\nhost: \"daeitrain44459.eur.ad.sag:5555\"\r\nbasePath: \"/rad/ZApiTest.AddIntegers:new_rad\"\r\nschemes:\r\n- \"http\"\r\nconsumes:\r\n- \"application/json\"\r\nproduces:\r\n- \"application/json\"\r\npaths:\r\n  /addChk:\r\n    get:\r\n      description: \"\"\r\n      operationId: \"addChk_GET_1\"\r\n      parameters: []\r\n      responses:\r\n        200:\r\n          description: \"OK\"\r\n          schema:\r\n            $ref: \"#/definitions/addChk_GET_response\"\r\n        401:\r\n          description: \"Access Denied\"\r\n    post:\r\n      description: \"\"\r\n      operationId: \"addChk_POST_1\"\r\n      parameters:\r\n      - in: \"body\"\r\n        name: \"pri:Doc\"\r\n        description: \"\"\r\n        required: true\r\n        schema:\r\n          $ref: \"#/definitions/pri\"\r\n      responses:\r\n        200:\r\n          description: \"OK\"\r\n          schema:\r\n            $ref: \"#/definitions/addChk_POST_response\"\r\n        401:\r\n          description: \"Access Denied\"\r\ndefinitions:\r\n  addChk_POST_response:\r\n    required:\r\n    - \"resultInt\"\r\n    properties:\r\n      resultInt:\r\n        $ref: \"#/definitions/resultInt\"\r\n  pri:\r\n    required:\r\n    - \"a1\"\r\n    - \"a2\"\r\n    properties:\r\n      a1:\r\n        type: \"string\"\r\n      a2:\r\n        type: \"string\"\r\n  addChk_GET_response:\r\n    required:\r\n    - \"resultInt\"\r\n    properties:\r\n      resultInt:\r\n        $ref: \"#/definitions/resultInt\"\r\n  resultInt:\r\n    required:\r\n    - \"r1\"\r\n    properties:\r\n      r1:\r\n        type: \"string\"\r\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-06 08:37:00 GMT",
+  "systemVersion" : 1,
+  "id" : "d44f0300-1de0-4d55-a461-bd923192087d"
+}

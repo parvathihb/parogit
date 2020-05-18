@@ -1,0 +1,26 @@
+{
+  "id" : "3245ea9a-c203-4055-ac26-17f29ab32c58",
+  "names" : [ {
+    "value" : "Default Policy for API petStoreSOAP",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "79a71620-3405-421d-af45-ec4e977910eb"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "dd6dd09d-d731-4245-8f4e-18c663318d6c"
+    } ],
+    "stageKey" : "routing"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

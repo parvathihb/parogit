@@ -1,0 +1,145 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "checkAPI"
+    },
+    "serviceRegistryDisplayName" : "checkAPI_1.0",
+    "schemes" : [ ],
+    "security" : [ ],
+    "paths" : {
+      "/user" : {
+        "get" : {
+          "consumes" : [ ],
+          "responses" : { },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "requestBody"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/user",
+        "enabled" : true
+      },
+      "/customers" : {
+        "get" : {
+          "consumes" : [ ],
+          "parameters" : [ {
+            "in" : "query",
+            "name" : "place",
+            "description" : "",
+            "required" : false,
+            "repeat" : false,
+            "type" : "string",
+            "parameterSchema" : {
+              "type" : "string"
+            }
+          }, {
+            "in" : "query",
+            "name" : "id",
+            "description" : "",
+            "required" : true,
+            "repeat" : false,
+            "type" : "string",
+            "parameterSchema" : {
+              "type" : "string"
+            }
+          }, {
+            "in" : "query",
+            "name" : "name",
+            "required" : false,
+            "repeat" : false,
+            "type" : "string",
+            "parameterSchema" : {
+              "type" : "string"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "success",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            },
+            "400" : {
+              "description" : "",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            },
+            "204" : {
+              "description" : "",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "requestBody"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/customers",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://daeitrain42407:5555/gateway/checkAPI/1.0",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : { },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://daeitrain42407:5555/gateway/checkAPI/1.0",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "checkAPI",
+  "apiVersion" : "1.0",
+  "apiDescription" : "checkAPIRepro\r\n",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "23f78b5c-b6f8-459c-91c4-9f5abf2a54e7" ],
+  "referencedFiles" : {
+    "checkAPI.json" : "{\r\n  \"swagger\" : \"2.0\",\r\n  \"info\" : {\r\n    \"version\" : \"1.0\",\r\n    \"title\" : \"checkAPI\"\r\n  },\r\n  \"host\" : \"daeitrain42407:5555\",\r\n  \"basePath\" : \"/gateway/checkAPI/1.0\",\r\n  \"schemes\" : [ \"http\" ],\r\n  \"paths\" : {\r\n    \"/user\" : {\r\n      \"get\" : {\r\n        \"consumes\" : [ ],\r\n        \"parameters\" : [ ]\r\n      }\r\n    },\r\n    \"/customers\" : {\r\n      \"get\" : {\r\n        \"consumes\" : [ ],\r\n        \"parameters\" : [ ]\r\n      }\r\n    }\r\n  }\r\n}\r\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-04-09 16:42:28 GMT",
+  "lastModified" : "2020-05-05 11:49:51 GMT",
+  "systemVersion" : 1,
+  "id" : "5c907523-c5d9-459e-b6cb-953c770a0b16"
+}

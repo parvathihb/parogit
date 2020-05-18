@@ -1,0 +1,105 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "genID"
+    },
+    "serviceRegistryDisplayName" : "generateID_1.0",
+    "schemes" : [ ],
+    "consumes" : [ "application/json" ],
+    "produces" : [ "application/json" ],
+    "security" : [ ],
+    "paths" : {
+      "/genID" : {
+        "get" : {
+          "description" : "",
+          "operationId" : "genID_GET_1",
+          "responses" : {
+            "200" : {
+              "description" : "OK",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/genID_GET_response"
+                  },
+                  "examples" : { }
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            },
+            "401" : {
+              "description" : "Access Denied",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "genID_GET_1"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/genID",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://daeitrain44459.eur.ad.sag:5555/rad/repro:new_rad",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : {
+        "genID_GET_response" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"uid\"],\"type\":\"object\",\"properties\":{\"uid\":{\"type\":\"string\"}}}"
+        }
+      },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://daeitrain44459.eur.ad.sag:5555/rad/repro:new_rad",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "generateID",
+  "apiVersion" : "1.0",
+  "apiDescription" : "CheckforResponseTranformation\r\n",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "e917f9af-f058-4a89-b5e9-15f3c0f7bc78" ],
+  "referencedFiles" : {
+    "genID.json" : "---\r\nswagger: \"2.0\"\r\ninfo:\r\n  version: \"1.0\"\r\n  title: \"genID\"\r\nhost: \"daeitrain44459.eur.ad.sag:5555\"\r\nbasePath: \"/rad/repro:new_rad\"\r\nschemes:\r\n- \"http\"\r\nconsumes:\r\n- \"application/json\"\r\nproduces:\r\n- \"application/json\"\r\npaths:\r\n  /genID:\r\n    get:\r\n      description: \"\"\r\n      operationId: \"genID_GET_1\"\r\n      parameters: []\r\n      responses:\r\n        200:\r\n          description: \"OK\"\r\n          schema:\r\n            $ref: \"#/definitions/genID_GET_response\"\r\n        401:\r\n          description: \"Access Denied\"\r\ndefinitions:\r\n  genID_GET_response:\r\n    required:\r\n    - \"uid\"\r\n    properties:\r\n      uid:\r\n        type: \"string\"\r\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-05 12:01:35 GMT",
+  "lastModified" : "2020-05-12 05:46:14 GMT",
+  "systemVersion" : 1,
+  "id" : "9bc63b57-3347-4fe6-8302-2eb2c67b3b36"
+}

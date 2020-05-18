@@ -1,0 +1,165 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "cacheResultsGetPost"
+    },
+    "serviceRegistryDisplayName" : "cacheResultsGetPost_2.0",
+    "schemes" : [ ],
+    "consumes" : [ "application/json" ],
+    "produces" : [ "application/json" ],
+    "security" : [ ],
+    "paths" : {
+      "/multi" : {
+        "post" : {
+          "description" : "",
+          "operationId" : "multi_POST_2",
+          "responses" : {
+            "200" : {
+              "description" : "OK",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/multi_POST_response"
+                  },
+                  "examples" : { }
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            },
+            "401" : {
+              "description" : "Access Denied",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/inputNumbers"
+                },
+                "examples" : { }
+              }
+            },
+            "name" : "multi_POST_2"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/multi",
+        "enabled" : true
+      },
+      "/add" : {
+        "get" : {
+          "description" : "",
+          "operationId" : "add_GET_1",
+          "responses" : {
+            "200" : {
+              "description" : "OK",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/add_GET_response"
+                  },
+                  "examples" : { }
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            },
+            "401" : {
+              "description" : "Access Denied",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "add_GET_1"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/add",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://daeitrain44459.eur.ad.sag:5555/rad/soapCacheTest.REST:cacheResultsGETPOST",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : {
+        "result" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"MathResult\"],\"type\":\"object\",\"properties\":{\"MathResult\":{\"type\":\"string\"}}}"
+        },
+        "add_GET_response" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"out\"],\"type\":\"object\",\"properties\":{\"out\":{\"$ref\":\"#/components/schemas/result\"}}}"
+        },
+        "inputNumbers" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"num1\",\"num2\"],\"type\":\"object\",\"properties\":{\"num1\":{\"type\":\"string\"},\"num2\":{\"type\":\"string\"}}}"
+        },
+        "multi_POST_response" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"out\"],\"type\":\"object\",\"properties\":{\"out\":{\"$ref\":\"#/components/schemas/result\"}}}"
+        }
+      },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://daeitrain44459.eur.ad.sag:5555/rad/soapCacheTest.REST:cacheResultsGETPOST",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "cacheResultsGetPost",
+  "apiVersion" : "2.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "fcca3943-b653-40ac-8bad-49296c72319c" ],
+  "referencedFiles" : {
+    "swagger.json" : "---\r\nswagger: \"2.0\"\r\ninfo:\r\n  version: \"1.0\"\r\n  title: \"cacheResultsGetPost\"\r\nhost: \"daeitrain44459.eur.ad.sag:5555\"\r\nbasePath: \"/rad/soapCacheTest.REST:cacheResultsGETPOST\"\r\nschemes:\r\n- \"http\"\r\nconsumes:\r\n- \"application/json\"\r\nproduces:\r\n- \"application/json\"\r\npaths:\r\n  /add:\r\n    get:\r\n      description: \"\"\r\n      operationId: \"add_GET_1\"\r\n      parameters: []\r\n      responses:\r\n        200:\r\n          description: \"OK\"\r\n          schema:\r\n            $ref: \"#/definitions/add_GET_response\"\r\n        401:\r\n          description: \"Access Denied\"\r\n  /multi:\r\n    post:\r\n      description: \"\"\r\n      operationId: \"multi_POST_2\"\r\n      parameters:\r\n      - in: \"body\"\r\n        name: \"in\"\r\n        description: \"\"\r\n        required: true\r\n        schema:\r\n          $ref: \"#/definitions/inputNumbers\"\r\n      responses:\r\n        200:\r\n          description: \"OK\"\r\n          schema:\r\n            $ref: \"#/definitions/multi_POST_response\"\r\n        401:\r\n          description: \"Access Denied\"\r\ndefinitions:\r\n  add_GET_response:\r\n    required:\r\n    - \"out\"\r\n    properties:\r\n      out:\r\n        $ref: \"#/definitions/result\"\r\n  multi_POST_response:\r\n    required:\r\n    - \"out\"\r\n    properties:\r\n      out:\r\n        $ref: \"#/definitions/result\"\r\n  result:\r\n    required:\r\n    - \"MathResult\"\r\n    properties:\r\n      MathResult:\r\n        type: \"string\"\r\n  inputNumbers:\r\n    required:\r\n    - \"num1\"\r\n    - \"num2\"\r\n    properties:\r\n      num1:\r\n        type: \"string\"\r\n      num2:\r\n        type: \"string\"\r\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-14 10:51:41 GMT",
+  "lastModified" : "2020-05-14 12:26:19 GMT",
+  "systemVersion" : 1,
+  "id" : "f1c924fe-2939-4694-bcb9-95ce588ea49f"
+}

@@ -1,0 +1,14 @@
+{
+  "id" : "44e31996-5f2b-4dcb-8e44-9d7e7b801e0d",
+  "loginId" : "user1",
+  "caller" : "Administrator",
+  "firstName" : "temp",
+  "lastName" : "Testuser1",
+  "hashedPassword" : "{sha-256_v2}BmQtrSFF99MWt+IIZxNNRzROIcLBdT+h5nB5LS4/V1ys6BNpdaHIjDAxMDAw",
+  "type" : "local",
+  "emailAddresses" : [ ],
+  "allowDigestAuth" : false,
+  "active" : true,
+  "systemDefined" : false,
+  "language" : ""
+}

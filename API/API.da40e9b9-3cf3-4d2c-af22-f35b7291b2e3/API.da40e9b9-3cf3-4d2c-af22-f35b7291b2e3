@@ -1,0 +1,352 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "description" : "This API was created in API Gateway from scratch",
+      "version" : "1.0",
+      "title" : "LabCaseTestService_APIG"
+    },
+    "serviceRegistryDisplayName" : "LabCaseTestService_APIG_1.0",
+    "tags" : [ {
+      "name" : "Lidl"
+    }, {
+      "name" : "Test"
+    }, {
+      "name" : "Read"
+    }, {
+      "name" : "Create"
+    }, {
+      "name" : "LabCase"
+    }, {
+      "name" : "Update"
+    }, {
+      "name" : "Delete"
+    }, {
+      "name" : "List of issues"
+    }, {
+      "name" : "Specific issue"
+    } ],
+    "schemes" : [ ],
+    "security" : [ ],
+    "paths" : {
+      "/issues.json" : {
+        "get" : {
+          "tags" : [ "Read" ],
+          "description" : "Get all or some issues for a project",
+          "operationId" : "GetId",
+          "parameters" : [ {
+            "default" : "id",
+            "in" : "query",
+            "parameterSchema" : {
+              "type" : "string"
+            },
+            "name" : "sort",
+            "description" : "Attribute by which the result set should be sorted",
+            "_enum" : [ "id", "id" ],
+            "type" : "string",
+            "required" : false
+          }, {
+            "default" : "",
+            "in" : "query",
+            "parameterSchema" : {
+              "type" : "string"
+            },
+            "name" : "limit",
+            "description" : "Number of issues to fetch",
+            "type" : "string",
+            "required" : false
+          }, {
+            "default" : "0",
+            "in" : "query",
+            "parameterSchema" : {
+              "type" : "string"
+            },
+            "name" : "offset",
+            "description" : "Offset of the selected window for this query (0 for first issues)",
+            "_enum" : [ "0", "0" ],
+            "type" : "string",
+            "required" : false
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "LabCase returns all or some issues",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{\"required\":[],\"type\":\"object\",\"properties\":{\"issues\":{\"type\":\"array\",\"items\":{\"required\":[],\"type\":\"object\",\"properties\":{\"author\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"created_on\":{\"type\":\"string\"},\"custom_fields\":{\"type\":\"array\",\"items\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"}}}},\"description\":{\"type\":\"string\"},\"done_ratio\":{\"type\":\"integer\",\"format\":\"int32\"},\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"priority\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"project\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"start_date\":{\"type\":\"string\"},\"status\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"subject\":{\"type\":\"string\"},\"tracker\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"updated_on\":{\"type\":\"string\"}}}},\"limit\":{\"type\":\"integer\",\"format\":\"int32\"},\"offset\":{\"type\":\"integer\",\"format\":\"int32\"},\"total_count\":{\"type\":\"integer\",\"format\":\"int32\"}}}"
+                  },
+                  "examples" : { },
+                  "example" : "{\n    \"issues\": [\n        {\n            \"id\": 148979,\n            \"project\": {\n                \"id\": 7403,\n                \"name\": \"LabCaseTestProject\"\n            },\n            \"tracker\": {\n                \"id\": 7,\n                \"name\": \"Todo\"\n            },\n            \"status\": {\n                \"id\": 1,\n                \"name\": \"New\"\n            },\n            \"priority\": {\n                \"id\": 4,\n                \"name\": \"Normal\"\n            },\n            \"author\": {\n                \"id\": 20153,\n                \"name\": \"Thomas Hesse (extern) (thesse) [EXT]\"\n            },\n            \"subject\": \"New subject for first test issue\",\n            \"description\": \"Description of the first test issue\",\n            \"start_date\": \"2017-12-13\",\n            \"done_ratio\": 0,\n            \"custom_fields\": [\n                {\n                    \"id\": 5,\n                    \"name\": \"Solution description\",\n                    \"value\": \"\"\n                },\n                {\n                    \"id\": 9,\n                    \"name\": \"Open Air Task\",\n                    \"value\": \"\"\n                },\n                {\n                    \"id\": 16,\n                    \"name\": \"Points (Deprecated)\",\n                    \"value\": \"\"\n                }\n            ],\n            \"created_on\": \"2017-12-13T07:40:07Z\",\n            \"updated_on\": \"2017-12-15T08:21:45Z\"\n        },\n        {\n            \"id\": 149044,\n            \"project\": {\n                \"id\": 7403,\n                \"name\": \"LabCaseTestProject\"\n            },\n            \"tracker\": {\n                \"id\": 7,\n                \"name\": \"Todo\"\n            },\n            \"status\": {\n                \"id\": 1,\n                \"name\": \"New\"\n            },\n            \"priority\": {\n                \"id\": 4,\n                \"name\": \"Normal\"\n            },\n            \"author\": {\n                \"id\": 20153,\n                \"name\": \"Thomas Hesse (extern) (thesse) [EXT]\"\n            },\n            \"subject\": \"Second test issue\",\n            \"description\": \"Description of second test issue\",\n            \"start_date\": \"2017-12-13\",\n            \"done_ratio\": 0,\n            \"custom_fields\": [\n                {\n                    \"id\": 5,\n                    \"name\": \"Solution description\",\n                    \"value\": \"\"\n                },\n                {\n                    \"id\": 9,\n                    \"name\": \"Open Air Task\",\n                    \"value\": \"\"\n                },\n                {\n                    \"id\": 16,\n                    \"name\": \"Points (Deprecated)\",\n                    \"value\": \"\"\n                }\n            ],\n            \"created_on\": \"2017-12-13T15:52:54Z\",\n            \"updated_on\": \"2017-12-13T15:52:54Z\"\n        }\n    ],\n    \"total_count\": 2,\n    \"offset\": 0,\n    \"limit\": 25\n}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : {
+            "200" : {
+              "responseBody" : {
+                "application/json" : "{\n\t\"issues\": [\n\t\t{\n\t\t\t\"id\": 148979,\n\t\t\t\"project\": {\n\t\t\t\t\"id\": 7403,\n\t\t\t\t\"name\": \"LabCaseTestProject\"\n\t\t\t},\n\t\t\t\"tracker\": {\n\t\t\t\t\"id\": 7,\n\t\t\t\t\"name\": \"Todo\"\n\t\t\t},\n\t\t\t\"status\": {\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"New\"\n\t\t\t},\n\t\t\t\"priority\": {\n\t\t\t\t\"id\": 4,\n\t\t\t\t\"name\": \"Normal\"\n\t\t\t},\n\t\t\t\"author\": {\n\t\t\t\t\"id\": 20153,\n\t\t\t\t\"name\": \"Thomas Hesse (extern) (thesse) [EXT]\"\n\t\t\t},\n\t\t\t\"subject\": \"Mock response: New subject for first test issue\",\n\t\t\t\"description\": \"Mock response: Description of the first test issue\",\n\t\t\t\"start_date\": \"2017-12-13\",\n\t\t\t\"done_ratio\": 0,\n\t\t\t\"custom_fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"id\": 5,\n\t\t\t\t\t\"name\": \"Solution description\",\n\t\t\t\t\t\"value\": \"\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"id\": 9,\n\t\t\t\t\t\"name\": \"Open Air Task\",\n\t\t\t\t\t\"value\": \"\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"id\": 16,\n\t\t\t\t\t\"name\": \"Points (Deprecated)\",\n\t\t\t\t\t\"value\": \"\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"created_on\": \"2017-12-13T07:40:07Z\",\n\t\t\t\"updated_on\": \"2017-12-15T08:21:45Z\"\n\t\t},\n\t\t{\n\t\t\t\"id\": 149044,\n\t\t\t\"project\": {\n\t\t\t\t\"id\": 7403,\n\t\t\t\t\"name\": \"LabCaseTestProject\"\n\t\t\t},\n\t\t\t\"tracker\": {\n\t\t\t\t\"id\": 7,\n\t\t\t\t\"name\": \"Todo\"\n\t\t\t},\n\t\t\t\"status\": {\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"name\": \"New\"\n\t\t\t},\n\t\t\t\"priority\": {\n\t\t\t\t\"id\": 4,\n\t\t\t\t\"name\": \"Normal\"\n\t\t\t},\n\t\t\t\"author\": {\n\t\t\t\t\"id\": 20153,\n\t\t\t\t\"name\": \"Thomas Hesse (extern) (thesse) [EXT]\"\n\t\t\t},\n\t\t\t\"subject\": \"Mock response: Second test issue\",\n\t\t\t\"description\": \"Mock response: Description of second test issue\",\n\t\t\t\"start_date\": \"2017-12-13\",\n\t\t\t\"done_ratio\": 0,\n\t\t\t\"custom_fields\": [\n\t\t\t\t{\n\t\t\t\t\t\"id\": 5,\n\t\t\t\t\t\"name\": \"Solution description\",\n\t\t\t\t\t\"value\": \"\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"id\": 9,\n\t\t\t\t\t\"name\": \"Open Air Task\",\n\t\t\t\t\t\"value\": \"\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"id\": 16,\n\t\t\t\t\t\"name\": \"Points (Deprecated)\",\n\t\t\t\t\t\"value\": \"\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"created_on\": \"2017-12-13T15:52:54Z\",\n\t\t\t\"updated_on\": \"2017-12-13T15:52:54Z\"\n\t\t}\n\t],\n\t\"total_count\": 2,\n\t\"offset\": 0,\n\t\"limit\": \"${request.query.limit}\"\n}"
+              },
+              "responseHeaders" : {
+                "x-mock-response" : "true"
+              }
+            }
+          },
+          "mockedConditionsBasedCustomResponsesList" : [ {
+            "mockedConditionList" : [ {
+              "mockedConditionParameter" : "QueryParameter",
+              "mockedLevel1Operator" : "ContainsKeyValue",
+              "mockedLevel2Operator" : "Equals",
+              "value1" : "limit",
+              "value2" : "1",
+              "conditionName" : "Only one issue"
+            } ],
+            "mockedResponse" : {
+              "responseBody" : {
+                "application/json" : "{\n    \"issues\": [\n        {\n            \"id\": 148979,\n            \"project\": {\n                \"id\": 7403,\n                \"name\": \"LabCaseTestProject\"\n            },\n            \"tracker\": {\n                \"id\": 7,\n                \"name\": \"Todo\"\n            },\n            \"status\": {\n                \"id\": 1,\n                \"name\": \"New\"\n            },\n            \"priority\": {\n                \"id\": 4,\n                \"name\": \"Normal\"\n            },\n            \"author\": {\n                \"id\": 20153,\n                \"name\": \"Thomas Hesse (extern) (thesse) [EXT]\"\n            },\n            \"subject\": \"Mock response: New subject for first test issue\",\n            \"description\": \"Mock response: Description of the first test issue\",\n            \"start_date\": \"2017-12-13\",\n            \"done_ratio\": 0,\n            \"custom_fields\": [\n                {\n                    \"id\": 5,\n                    \"name\": \"Solution description\",\n                    \"value\": \"\"\n                },\n                {\n                    \"id\": 9,\n                    \"name\": \"Open Air Task\",\n                    \"value\": \"\"\n                },\n                {\n                    \"id\": 16,\n                    \"name\": \"Points (Deprecated)\",\n                    \"value\": \"\"\n                }\n            ],\n            \"created_on\": \"2017-12-13T07:40:07Z\",\n            \"updated_on\": \"2017-12-15T08:21:45Z\"\n        }\n    ],\n    \"total_count\": 2,\n    \"offset\": 0,\n    \"limit\": 1\n}"
+              },
+              "responseHeaders" : {
+                "x-mock-response" : "true"
+              },
+              "statusCode" : "200"
+            }
+          } ],
+          "enabled" : true,
+          "scopes" : [ "READ" ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "GetId"
+          }
+        },
+        "post" : {
+          "tags" : [ "Create" ],
+          "description" : "Add a new issue for a project",
+          "operationId" : "PostId",
+          "responses" : {
+            "201" : {
+              "description" : "LabCase has created the issue with the specified subject",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{\"required\":[],\"type\":\"object\",\"properties\":{\"issue\":{\"required\":[],\"type\":\"object\",\"properties\":{\"agile_data_attributes\":{\"required\":[],\"type\":\"object\"},\"author\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"created_on\":{\"type\":\"string\"},\"custom_fields\":{\"type\":\"array\",\"items\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"}}}},\"done_ratio\":{\"type\":\"integer\",\"format\":\"int32\"},\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"priority\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"project\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"start_date\":{\"type\":\"string\"},\"status\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"subject\":{\"type\":\"string\"},\"tracker\":{\"required\":[],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int32\"},\"name\":{\"type\":\"string\"}}},\"updated_on\":{\"type\":\"string\"}}}}}"
+                  },
+                  "examples" : { },
+                  "example" : "{\n    \"issue\": {\n        \"id\": 158101,\n        \"project\": {\n            \"id\": 7403,\n            \"name\": \"LabCaseTestProject\"\n        },\n        \"tracker\": {\n            \"id\": 7,\n            \"name\": \"Todo\"\n        },\n        \"status\": {\n            \"id\": 1,\n            \"name\": \"New\"\n        },\n        \"priority\": {\n            \"id\": 4,\n            \"name\": \"Normal\"\n        },\n        \"author\": {\n            \"id\": 20153,\n            \"name\": \"Thomas Hesse (extern) (thesse) [EXT]\"\n        },\n        \"subject\": \"Initial subject\",\n        \"start_date\": \"2018-03-12\",\n        \"done_ratio\": 0,\n        \"custom_fields\": [\n            {\n                \"id\": 5,\n                \"name\": \"Solution description\",\n                \"value\": \"\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Open Air Task\"\n            },\n            {\n                \"id\": 16,\n                \"name\": \"Points (Deprecated)\",\n                \"value\": \"\"\n            }\n        ],\n        \"created_on\": \"2018-03-12T10:47:17Z\",\n        \"updated_on\": \"2018-03-12T10:47:17Z\",\n        \"agile_data_attributes\": {}\n    }\n}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ {
+            "mockedConditionList" : [ {
+              "mockedConditionParameter" : "Header",
+              "mockedLevel1Operator" : "ContainsKeyValue",
+              "mockedLevel2Operator" : "Equals",
+              "value1" : "Content-Type",
+              "value2" : "application/json",
+              "conditionName" : "POST"
+            } ],
+            "mockedResponse" : {
+              "responseBody" : {
+                "application/json" : "{\n    \"issue\": {\n        \"id\": 158101,\n        \"project\": {\n            \"id\": 7403,\n            \"name\": \"LabCaseTestProject\"\n        },\n        \"tracker\": {\n            \"id\": 7,\n            \"name\": \"Todo\"\n        },\n        \"status\": {\n            \"id\": 1,\n            \"name\": \"New\"\n        },\n        \"priority\": {\n            \"id\": 4,\n            \"name\": \"Normal\"\n        },\n        \"author\": {\n            \"id\": 20153,\n            \"name\": \"Thomas Hesse (extern) (thesse) [EXT]\"\n        },\n        \"subject\": \"${request.body.issue.subject}\",\n        \"start_date\": \"2018-03-12\",\n        \"done_ratio\": 0,\n        \"custom_fields\": [\n            {\n                \"id\": 5,\n                \"name\": \"Solution description\",\n                \"value\": \"\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Open Air Task\"\n            },\n            {\n                \"id\": 16,\n                \"name\": \"Points (Deprecated)\",\n                \"value\": \"\"\n            }\n        ],\n        \"created_on\": \"2018-03-12T10:47:17Z\",\n        \"updated_on\": \"2018-03-12T10:47:17Z\",\n        \"agile_data_attributes\": {}\n    }\n}"
+              },
+              "statusCode" : "201"
+            }
+          } ],
+          "enabled" : true,
+          "scopes" : [ "WRITE" ],
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "gateway",
+                  "schema" : "{\n\t\"required\": [],\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"issue\": {\n\t\t\t\"required\": [],\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"subject\": {\n\t\t\t\t\t\"title\": \"The subject of the new issue (schema for POST XML)\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+                },
+                "examples" : { },
+                "example" : "<issue><subject>Subject of new issue</subject></issue>"
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "gateway",
+                  "schema" : "{\"required\":[],\"type\":\"object\",\"properties\":{\"issue\":{\"required\":[],\"type\":\"object\",\"properties\":{\"subject\":{\"title\":\"The subject of the new issue (schema for POST JSON)\",\"type\":\"string\",\"default\":\"\"}}}}}"
+                },
+                "examples" : { },
+                "example" : "{\n    \"issue\": {\n        \"subject\": \"Subject of new issue\"\n    }\n}"
+              }
+            },
+            "name" : "PostId"
+          }
+        },
+        "scopes" : [ ],
+        "tags" : [ "Read", "Create", "List of issues" ],
+        "displayName" : "Issues",
+        "description" : "This represents a list of all issues stored in LabCase",
+        "enabled" : true
+      },
+      "/issues/{id}.json" : {
+        "put" : {
+          "tags" : [ "Update" ],
+          "description" : "Update one issue",
+          "operationId" : "PutId",
+          "responses" : {
+            "200" : {
+              "description" : "LabCase has updated the subject of the selected issue",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : {
+            "200" : {
+              "responseHeaders" : {
+                "x-mock-response" : "true"
+              }
+            }
+          },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "gateway",
+                  "schema" : "{\n\t\"required\": [],\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"issue\": {\n\t\t\t\"required\": [],\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"subject\": {\n\t\t\t\t\t\"title\": \"The new subject of the issue (schema for PUT XML)\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+                },
+                "examples" : { },
+                "example" : "<issue><subject>New subject</subject></issue>"
+              },
+              "application/json" : {
+                "schema" : {
+                  "type" : "gateway",
+                  "schema" : "{\"required\":[],\"type\":\"object\",\"properties\":{\"issue\":{\"required\":[],\"type\":\"object\",\"properties\":{\"subject\":{\"title\":\"The new subject of the issue (schema for PUT JSON)\",\"type\":\"string\",\"default\":\"\"}}}}}"
+                },
+                "examples" : { },
+                "example" : "{\n    \"issue\": {\n        \"subject\": \"New subject\"\n    }\n}"
+              }
+            },
+            "name" : "PutId"
+          }
+        },
+        "delete" : {
+          "tags" : [ "Delete" ],
+          "description" : "Delete an issue",
+          "operationId" : "DeleteId",
+          "responses" : {
+            "200" : {
+              "description" : "LabCase has deleted the issue",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : {
+            "200" : {
+              "responseHeaders" : {
+                "x-mock-response" : "true"
+              }
+            }
+          },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "DeleteId"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "default" : "",
+            "format" : "int64",
+            "readOnly" : false,
+            "type" : "integer"
+          },
+          "in" : "path",
+          "parameterSchema" : {
+            "format" : "int64",
+            "type" : "integer"
+          },
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "required" : true
+        } ],
+        "scopes" : [ "WRITE" ],
+        "tags" : [ "Update", "Delete", "Specific issue" ],
+        "displayName" : "Specific Issue",
+        "description" : "This represents one specific issue stored in LabCase",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "https://labcase.softwareag.com/",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : { },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "apiTags" : [ "Test", "LabCase" ],
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "https://labcase.softwareag.com/",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "LabCaseTestService_APIG",
+  "apiVersion" : "1.0",
+  "apiDescription" : "API to test the SI 5397580 - Response schemas not included in Swagger file",
+  "maturityState" : "Test",
+  "apiGroups" : [ "LabCase Demo APIs from API Gateway" ],
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "3f7736da-7f7e-4ddb-8438-af3a1fbc0883" ],
+  "scopes" : [ {
+    "name" : "READ",
+    "description" : "",
+    "oAuth2ScopeName" : "c3e7fdc4-ca98-41da-b21d-ae6a438adf1f",
+    "policies" : [ "adb0585d-8b3d-4af1-9415-4f337e757edb" ],
+    "mashedUpAPI" : false
+  }, {
+    "name" : "WRITE",
+    "description" : "",
+    "oAuth2ScopeName" : "757f39e7-fd9e-4623-b25e-88b1a9a43104",
+    "policies" : [ "edae622d-b045-41eb-b374-0f7be3b68bad" ],
+    "mashedUpAPI" : false
+  } ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2018-06-08 11:10:29 GMT",
+  "lastModified" : "2020-04-03 09:36:54 GMT",
+  "systemVersion" : 1,
+  "mockService" : {
+    "enableMock" : false
+  },
+  "id" : "da40e9b9-3cf3-4d2c-af22-f35b7291b2e3"
+}

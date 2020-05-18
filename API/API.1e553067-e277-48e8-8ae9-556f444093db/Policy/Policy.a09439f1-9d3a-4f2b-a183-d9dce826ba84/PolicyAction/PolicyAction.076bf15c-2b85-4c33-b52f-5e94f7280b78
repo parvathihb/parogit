@@ -1,0 +1,25 @@
+{
+  "id" : "076bf15c-2b85-4c33-b52f-5e94f7280b78",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "https://dsinu2-jbo.unix-int.intra-int.bdf-int.local:8443/sinus2-web/services/RechercheSignataireACDCService" ]
+  }, {
+    "templateKey" : "soapOptimize",
+    "values" : [ "None" ]
+  }, {
+    "templateKey" : "passSecurityHeaders",
+    "values" : [ "false" ]
+  }, {
+    "templateKey" : "connectTimeout",
+    "values" : [ "30" ]
+  }, {
+    "templateKey" : "readTimeout",
+    "values" : [ "30" ]
+  } ],
+  "active" : false
+}

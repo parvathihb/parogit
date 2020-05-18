@@ -1,0 +1,32 @@
+{
+  "applicationID" : "4679b1ec-8979-44f2-a5ef-d93180d24a2b",
+  "name" : "JWT_Access",
+  "description" : "JWT_AccessJWT_Access",
+  "owner" : "default:54b53072-540e-3eb8-b8e9-343e71f28176",
+  "identifiers" : [ {
+    "id" : "c3499e4b-4c17-4f6d-8f51-6458b33490e0",
+    "key" : "jwtClaims",
+    "swaggerName" : "",
+    "swaggerValue" : [ ],
+    "namedValues" : [ {
+      "name" : "JWT default claims set",
+      "values" : [ "{\"app_id\":\"4679b1ec-8979-44f2-a5ef-d93180d24a2b\",\"user\":\"Administrator\"}" ]
+    } ]
+  } ],
+  "contactEmails" : [ ],
+  "accessTokens" : {
+    "apiAccessKey" : {
+      "apiAccessKey" : "67f9b7cce7284ce87ec9a89f6fbad3e9ce7ab5194f83f04ecae85daccb29c0bc"
+    }
+  },
+  "creationDate" : "2020-05-12 10:33:48 GMT",
+  "lastModified" : "2020-05-15 03:05:14 GMT",
+  "lastUpdated" : 1589511914801,
+  "siteURLs" : [ ],
+  "jsOrigins" : [ ],
+  "version" : "1.0",
+  "properties" : { },
+  "isSuspended" : false,
+  "authStrategyIds" : [ "431181ac-aca2-42a7-b025-08f28df52e46" ],
+  "subscription" : false
+}

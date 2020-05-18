@@ -1,0 +1,31 @@
+{
+  "id" : "9555beca-ecca-4b3c-97da-a6745f6be9b6",
+  "names" : [ {
+    "value" : "Response Transformation",
+    "locale" : "en"
+  } ],
+  "templateKey" : "responseTransformation",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    } ]
+  }, {
+    "templateKey" : "responseTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "restHeaderTransformation",
+      "parameters" : [ {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${response.headers.x-data}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "${response.payload.jsonPath[$.empOut.id]}" ]
+        } ]
+      } ]
+    } ]
+  } ],
+  "active" : false
+}

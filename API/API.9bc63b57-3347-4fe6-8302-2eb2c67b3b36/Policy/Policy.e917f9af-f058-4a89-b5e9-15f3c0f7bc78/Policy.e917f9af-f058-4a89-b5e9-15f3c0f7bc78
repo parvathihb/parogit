@@ -1,0 +1,49 @@
+{
+  "id" : "e917f9af-f058-4a89-b5e9-15f3c0f7bc78",
+  "names" : [ {
+    "value" : "Default Policy for API generateID",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "ffd693bb-1fe2-481e-9e8b-68b1571ffca4",
+      "order" : "0"
+    } ],
+    "stageKey" : "requestPayloadProcessing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "7855f925-864f-42b1-8bf1-05e189362d16",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "a32e58ea-cd1b-4cf4-b718-bfbc4715a896",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "cebb9e86-9b49-43e0-b3d6-33e728a421b5",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "cb8d7637-6ef2-4036-a09b-6c021b23492f",
+      "order" : "0"
+    } ],
+    "stageKey" : "responseProcessing"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

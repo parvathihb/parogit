@@ -1,0 +1,37 @@
+{
+  "id" : "8a6a4e8b-5c99-40ab-a861-9a406ada225c",
+  "names" : [ {
+    "value" : "Custom Extension",
+    "locale" : "en"
+  } ],
+  "templateKey" : "customPolicy",
+  "parameters" : [ {
+    "templateKey" : "customExtensionType",
+    "values" : [ "externalCallout" ]
+  }, {
+    "templateKey" : "externalEndpoint",
+    "parameters" : [ {
+      "templateKey" : "endpointUri",
+      "values" : [ "https://petstore.swagger.io/v2/${sys:resource_path}" ]
+    }, {
+      "templateKey" : "externalEndpointMethod",
+      "values" : [ "CUSTOM" ]
+    } ]
+  }, {
+    "templateKey" : "mashupHeaderTransformation",
+    "parameters" : [ {
+      "templateKey" : "useIncomingHeaders",
+      "values" : [ "false" ]
+    } ]
+  }, {
+    "templateKey" : "customExtensionResponseProcessing",
+    "parameters" : [ {
+      "templateKey" : "copyEntireResponse",
+      "values" : [ "false" ]
+    }, {
+      "templateKey" : "abortInCaseOfFailure",
+      "values" : [ "false" ]
+    } ]
+  } ],
+  "active" : false
+}

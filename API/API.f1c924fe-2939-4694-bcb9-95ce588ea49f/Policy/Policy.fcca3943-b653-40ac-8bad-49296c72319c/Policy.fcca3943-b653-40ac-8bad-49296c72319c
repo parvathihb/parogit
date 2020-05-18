@@ -1,0 +1,43 @@
+{
+  "id" : "fcca3943-b653-40ac-8bad-49296c72319c",
+  "names" : [ {
+    "value" : "Default Policy for API cacheResultsGetPost",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "9d92791c-5607-4caa-9b1e-e6c7ee348d89",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "1be9152a-e9b4-454f-93de-c7296f10bae5",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "6d21d15d-bd1b-43ba-9201-fbaa67571c71",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "1840882b-13c0-4ba9-8eab-036aed7de41a",
+      "order" : "0"
+    } ],
+    "stageKey" : "responseProcessing"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

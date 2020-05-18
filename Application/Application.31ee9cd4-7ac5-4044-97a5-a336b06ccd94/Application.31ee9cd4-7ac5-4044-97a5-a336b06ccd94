@@ -1,0 +1,23 @@
+{
+  "applicationID" : "31ee9cd4-7ac5-4044-97a5-a336b06ccd94",
+  "name" : "genericApp",
+  "description" : "deploymentcheck",
+  "owner" : "Administrator",
+  "identifiers" : [ ],
+  "contactEmails" : [ ],
+  "accessTokens" : {
+    "apiAccessKey" : {
+      "apiAccessKey" : "5f233e73befe27852b4c4d1b05c7f96223c141e51e3cb369fcb34d8e934445bf"
+    }
+  },
+  "creationDate" : "2020-05-18 06:30:59 GMT",
+  "lastModified" : "2020-05-18 08:43:20 GMT",
+  "lastUpdated" : 1589791400309,
+  "siteURLs" : [ ],
+  "jsOrigins" : [ ],
+  "version" : "1.0",
+  "properties" : { },
+  "isSuspended" : false,
+  "authStrategyIds" : [ ],
+  "subscription" : false
+}

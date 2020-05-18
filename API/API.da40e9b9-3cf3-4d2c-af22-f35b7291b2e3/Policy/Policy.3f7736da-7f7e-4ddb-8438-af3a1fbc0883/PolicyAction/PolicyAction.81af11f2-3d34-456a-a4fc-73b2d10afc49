@@ -1,0 +1,46 @@
+{
+  "id" : "81af11f2-3d34-456a-a4fc-73b2d10afc49",
+  "names" : [ {
+    "value" : "Request Transformation",
+    "locale" : "en"
+  } ],
+  "templateKey" : "requestTransformation",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    }, {
+      "templateKey" : "transformationCondition",
+      "parameters" : [ {
+        "templateKey" : "transformationVariable",
+        "values" : [ "${request.httpMethod}" ]
+      }, {
+        "templateKey" : "transformationConditionOperator",
+        "values" : [ "equals" ]
+      }, {
+        "templateKey" : "transformationConditionValue",
+        "values" : [ "POST" ]
+      } ]
+    } ]
+  }, {
+    "templateKey" : "requestTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "methodTransformation",
+      "parameters" : [ {
+        "templateKey" : "method",
+        "values" : [ "CUSTOM" ]
+      } ]
+    }, {
+      "templateKey" : "payloadTransformation",
+      "parameters" : [ {
+        "templateKey" : "xsltAliasSelector",
+        "parameters" : [ {
+          "templateKey" : "xsltAlias",
+          "values" : [ "SetProjectIdTransformationAlias" ]
+        } ]
+      } ]
+    } ]
+  } ],
+  "active" : false
+}

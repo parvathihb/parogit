@@ -1,0 +1,7 @@
+{
+  "id" : "HTTP_AUTH_OUTBOUND_CLIENT_PWDMyLabCaseAccountThesse",
+  "pw" : "Y2nZOh2XWXGOmlEEsT/3BQ==",
+  "encryptorId" : "EntrustPbePlus",
+  "saltString" : "9AR29I4NeAAyJye2YuPUVQ==",
+  "iterationCount" : 2048
+}

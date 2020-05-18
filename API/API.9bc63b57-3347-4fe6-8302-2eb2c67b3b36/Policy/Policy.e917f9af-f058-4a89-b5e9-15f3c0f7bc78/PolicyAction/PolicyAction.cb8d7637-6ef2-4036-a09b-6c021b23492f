@@ -1,0 +1,46 @@
+{
+  "id" : "cb8d7637-6ef2-4036-a09b-6c021b23492f",
+  "names" : [ {
+    "value" : "Response Transformation",
+    "locale" : "en"
+  } ],
+  "templateKey" : "responseTransformation",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    }, {
+      "templateKey" : "transformationCondition",
+      "parameters" : [ {
+        "templateKey" : "transformationVariable",
+        "values" : [ "${response.headers.uid}" ]
+      }, {
+        "templateKey" : "transformationConditionOperator",
+        "values" : [ "equals" ]
+      }, {
+        "templateKey" : "transformationConditionValue",
+        "values" : [ "SOME_STRING" ]
+      } ]
+    } ]
+  }, {
+    "templateKey" : "responseTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "statusTransformation",
+      "parameters" : [ {
+        "templateKey" : "statusCodeOptional",
+        "values" : [ "201" ]
+      }, {
+        "templateKey" : "statusMessage",
+        "values" : [ "UID Generated" ]
+      } ]
+    }, {
+      "templateKey" : "restHeaderTransformation",
+      "parameters" : [ {
+        "templateKey" : "remove",
+        "values" : [ ]
+      } ]
+    } ]
+  } ],
+  "active" : false
+}

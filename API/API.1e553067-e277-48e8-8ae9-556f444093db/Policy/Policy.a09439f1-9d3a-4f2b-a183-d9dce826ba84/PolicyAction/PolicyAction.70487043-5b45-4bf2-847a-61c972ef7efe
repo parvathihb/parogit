@@ -1,0 +1,34 @@
+{
+  "id" : "70487043-5b45-4bf2-847a-61c972ef7efe",
+  "names" : [ {
+    "value" : "Outbound Authentication - Transport",
+    "locale" : "en"
+  } ],
+  "templateKey" : "outboundTransportAuthentication",
+  "parameters" : [ {
+    "templateKey" : "transportSecurity",
+    "parameters" : [ {
+      "templateKey" : "authType",
+      "values" : [ "KERBEROS" ]
+    }, {
+      "templateKey" : "authMode",
+      "values" : [ "NEW" ]
+    }, {
+      "templateKey" : "kerberosCredentials",
+      "parameters" : [ {
+        "templateKey" : "clientPrincipal",
+        "values" : [ "HERMES1KRB_ASV" ]
+      }, {
+        "templateKey" : "clientPassword",
+        "values" : [ "********************************" ]
+      }, {
+        "templateKey" : "servicePrincipal",
+        "values" : [ "SINUS2_KERBEROS_ASV" ]
+      }, {
+        "templateKey" : "servicePrincipalNameForm",
+        "values" : [ "username" ]
+      } ]
+    } ]
+  } ],
+  "active" : false
+}

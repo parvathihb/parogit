@@ -1,0 +1,17 @@
+{
+  "id" : "9bd971a8-42e7-4d92-b342-fa9898633e36",
+  "gatewayName" : "CheckPOrtal",
+  "gatewayUsername" : "Administrator",
+  "gatewayPassword" : "********************************",
+  "gatewayURL" : "https://daeitrain44459.eur.ad.sag:5556",
+  "refId" : "4818bb51-741f-11ea-5d6e-00155ddc9559",
+  "externalPortal" : {
+    "endpointTenant" : "default",
+    "endpointURL" : "https://localhost:18102/",
+    "endpointUsername" : "system",
+    "endpointPassword" : "********************************",
+    "type" : "apiportal"
+  },
+  "version" : "1.0",
+  "published" : true
+}

@@ -1,0 +1,14 @@
+{
+  "id" : "b73a8400-e008-11e7-9d18-f5832492b6de",
+  "name" : "MyLabCaseAccountThesse",
+  "description" : "Username \ty508854",
+  "type" : "httpTransportSecurityAlias",
+  "owner" : "Administrator",
+  "authType" : "HTTP_BASIC",
+  "authMode" : "NEW",
+  "httpAuthCredentials" : {
+    "userName" : "y508854",
+    "password" : "KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKio=",
+    "domain" : ""
+  }
+}

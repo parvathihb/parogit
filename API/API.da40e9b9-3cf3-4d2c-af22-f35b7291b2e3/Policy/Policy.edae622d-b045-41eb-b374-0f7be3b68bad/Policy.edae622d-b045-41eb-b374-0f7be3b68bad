@@ -1,0 +1,25 @@
+{
+  "id" : "edae622d-b045-41eb-b374-0f7be3b68bad",
+  "names" : [ {
+    "value" : "LabCaseTestService_APIG_scopePolicy",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "9ce722b9-84f2-47fd-bd3d-bb097c3bffba",
+      "order" : "0"
+    } ],
+    "stageKey" : "IAM"
+  } ],
+  "policyScope" : "SCOPE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

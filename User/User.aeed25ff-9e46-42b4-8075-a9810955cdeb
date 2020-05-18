@@ -1,0 +1,14 @@
+{
+  "id" : "aeed25ff-9e46-42b4-8075-a9810955cdeb",
+  "loginId" : "Prema",
+  "caller" : "Administrator",
+  "firstName" : "prema",
+  "lastName" : "",
+  "hashedPassword" : "{sha-256_v2}gkko8B+RKt3wLbiPJJVCeB7lEufsVF9qZT4KHSA+aUqwrug8UrCu0TAxMDAw",
+  "type" : "local",
+  "emailAddresses" : [ ],
+  "allowDigestAuth" : false,
+  "active" : true,
+  "systemDefined" : false,
+  "language" : ""
+}

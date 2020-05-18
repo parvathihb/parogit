@@ -1,0 +1,37 @@
+{
+  "id" : "ca2389b4-6c8b-470d-97b9-a37e15b45752",
+  "names" : [ {
+    "value" : "Default Policy for API TryAPI",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "1e6c916d-cf06-44ac-bfe3-f6a683dbe6ff",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "85bc0736-f92c-453e-894c-ab46e563c6ec",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "56be2d83-869e-40bf-b354-e2829b3f6baf",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

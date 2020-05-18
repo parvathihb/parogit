@@ -1,0 +1,16 @@
+{
+  "id" : "d1339647-a036-47f0-bf3b-5c78060b4e2f",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://daeitrain44459.eur.ad.sag:5555/rad/repro:new_rad/${sys:resource_path}" ]
+  }, {
+    "templateKey" : "method",
+    "values" : [ "CUSTOM" ]
+  } ],
+  "active" : false
+}

@@ -1,0 +1,37 @@
+{
+  "id" : "d204cf1f-6c2e-47f6-a37b-a6938bd6ab19",
+  "names" : [ {
+    "value" : "Custom Extension",
+    "locale" : "en"
+  } ],
+  "templateKey" : "customPolicy",
+  "parameters" : [ {
+    "templateKey" : "customExtensionType",
+    "values" : [ "externalCallout" ]
+  }, {
+    "templateKey" : "externalEndpoint",
+    "parameters" : [ {
+      "templateKey" : "endpointUri",
+      "values" : [ "http://SAG-6F0VMV2.eur.ad.sag:6000/rad/cacheTestGetREST:cacheTestRad/${sys:resource_path}" ]
+    }, {
+      "templateKey" : "externalEndpointMethod",
+      "values" : [ "CUSTOM" ]
+    } ]
+  }, {
+    "templateKey" : "mashupHeaderTransformation",
+    "parameters" : [ {
+      "templateKey" : "useIncomingHeaders",
+      "values" : [ "false" ]
+    } ]
+  }, {
+    "templateKey" : "customExtensionResponseProcessing",
+    "parameters" : [ {
+      "templateKey" : "copyEntireResponse",
+      "values" : [ "false" ]
+    }, {
+      "templateKey" : "abortInCaseOfFailure",
+      "values" : [ "false" ]
+    } ]
+  } ],
+  "active" : false
+}

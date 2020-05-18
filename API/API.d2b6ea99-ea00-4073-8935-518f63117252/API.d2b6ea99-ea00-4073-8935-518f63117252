@@ -1,0 +1,164 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "cacheTestRad"
+    },
+    "serviceRegistryDisplayName" : "cacheTestRad_1.0",
+    "schemes" : [ ],
+    "consumes" : [ "application/json" ],
+    "produces" : [ "application/json" ],
+    "security" : [ ],
+    "paths" : {
+      "/cacheTest" : {
+        "get" : {
+          "operationId" : "cacheTest_GET_1",
+          "parameters" : [ {
+            "schema" : {
+              "readOnly" : false,
+              "type" : "string"
+            },
+            "in" : "query",
+            "parameterSchema" : {
+              "type" : "string"
+            },
+            "name" : "propertyName",
+            "type" : "string",
+            "required" : true
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "OK",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/cacheTest_GET_response"
+                  },
+                  "examples" : { }
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            },
+            "401" : {
+              "description" : "Access Denied",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "cacheTest_GET_1"
+          }
+        },
+        "post" : {
+          "operationId" : "cacheTest_POST_1",
+          "responses" : {
+            "200" : {
+              "description" : "OK",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/cacheTest_POST_response"
+                  },
+                  "examples" : { }
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            },
+            "401" : {
+              "description" : "Access Denied",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "gateway",
+                  "schema" : "{\"type\":\"object\",\"properties\":{\"propertyName\":{\"type\":\"string\",\"readOnly\":false}}}"
+                },
+                "examples" : { }
+              }
+            },
+            "name" : "cacheTest_POST_1"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/cacheTest",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://SAG-6F0VMV2.eur.ad.sag:6000/rad/cacheTestGetREST:cacheTestRad",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : {
+        "cacheTest_GET_response" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"mappedValue\"],\"type\":\"object\",\"properties\":{\"mappedValue\":{\"type\":\"string\"}}}"
+        },
+        "cacheTest_POST_response" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"mappedValue\"],\"type\":\"object\",\"properties\":{\"mappedValue\":{\"type\":\"string\"}}}"
+        }
+      },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://SAG-6F0VMV2.eur.ad.sag:6000/rad/cacheTestGetREST:cacheTestRad",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "cacheTestRad",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "7e890152-b07c-40a6-ba1f-722c5d24da64" ],
+  "referencedFiles" : {
+    "swagger.json" : "---\r\nswagger: \"2.0\"\r\ninfo:\r\n  version: \"1.0\"\r\n  title: \"cacheTestRad\"\r\nhost: \"SAG-6F0VMV2.eur.ad.sag:6000\"\r\nbasePath: \"/rad/cacheTestGetREST:cacheTestRad\"\r\nschemes:\r\n- \"http\"\r\nconsumes:\r\n- \"application/json\"\r\nproduces:\r\n- \"application/json\"\r\npaths:\r\n  /cacheTest:\r\n    get:\r\n      operationId: \"cacheTest_GET_1\"\r\n      parameters:\r\n      - name: \"propertyName\"\r\n        in: \"query\"\r\n        required: true\r\n        type: \"string\"\r\n      responses:\r\n        200:\r\n          description: \"OK\"\r\n          schema:\r\n            $ref: \"#/definitions/cacheTest_GET_response\"\r\n        401:\r\n          description: \"Access Denied\"\r\n    post:\r\n      operationId: \"cacheTest_POST_1\"\r\n      parameters:\r\n      - name: \"propertyName\"\r\n        in: \"formData\"\r\n        required: true\r\n        type: \"string\"\r\n      responses:\r\n        200:\r\n          description: \"OK\"\r\n          schema:\r\n            $ref: \"#/definitions/cacheTest_POST_response\"\r\n        401:\r\n          description: \"Access Denied\"\r\ndefinitions:\r\n  cacheTest_POST_response:\r\n    required:\r\n    - \"mappedValue\"\r\n    properties:\r\n      mappedValue:\r\n        type: \"string\"\r\n  cacheTest_GET_response:\r\n    required:\r\n    - \"mappedValue\"\r\n    properties:\r\n      mappedValue:\r\n        type: \"string\"\r\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-14 12:34:18 GMT",
+  "lastModified" : "2020-05-14 12:53:49 GMT",
+  "systemVersion" : 1,
+  "id" : "d2b6ea99-ea00-4073-8935-518f63117252"
+}

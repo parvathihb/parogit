@@ -1,0 +1,16 @@
+{
+  "id" : "1e6c916d-cf06-44ac-bfe3-f6a683dbe6ff",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://daeitrain42407:5555/gateway/checkAPI/1.0/${sys:resource_path}" ]
+  }, {
+    "templateKey" : "method",
+    "values" : [ "CUSTOM" ]
+  } ],
+  "active" : false
+}

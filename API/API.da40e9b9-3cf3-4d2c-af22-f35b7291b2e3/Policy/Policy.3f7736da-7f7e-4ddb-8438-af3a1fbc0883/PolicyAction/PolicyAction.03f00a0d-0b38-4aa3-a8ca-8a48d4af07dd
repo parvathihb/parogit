@@ -1,0 +1,37 @@
+{
+  "id" : "03f00a0d-0b38-4aa3-a8ca-8a48d4af07dd",
+  "names" : [ {
+    "value" : "Request Transformation",
+    "locale" : "en"
+  } ],
+  "templateKey" : "requestTransformation",
+  "parameters" : [ {
+    "templateKey" : "transformationConditions",
+    "parameters" : [ {
+      "templateKey" : "logicalConnector",
+      "values" : [ "OR" ]
+    } ]
+  }, {
+    "templateKey" : "requestTransformationConfiguration",
+    "parameters" : [ {
+      "templateKey" : "methodTransformation",
+      "parameters" : [ {
+        "templateKey" : "method",
+        "values" : [ "CUSTOM" ]
+      } ]
+    }, {
+      "templateKey" : "commonTransformation",
+      "parameters" : [ {
+        "templateKey" : "addOrModify",
+        "parameters" : [ {
+          "templateKey" : "transformationVariable",
+          "values" : [ "${request.headers.x-name}" ]
+        }, {
+          "templateKey" : "transformationValue",
+          "values" : [ "${request.headers.x-firstname} ${request.headers.x-lastname}" ]
+        } ]
+      } ]
+    } ]
+  } ],
+  "active" : false
+}

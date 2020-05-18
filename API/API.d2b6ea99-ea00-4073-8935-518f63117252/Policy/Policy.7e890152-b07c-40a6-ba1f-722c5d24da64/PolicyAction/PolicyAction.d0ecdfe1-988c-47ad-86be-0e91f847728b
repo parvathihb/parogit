@@ -1,0 +1,16 @@
+{
+  "id" : "d0ecdfe1-988c-47ad-86be-0e91f847728b",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://SAG-6F0VMV2.eur.ad.sag:6000/rad/cacheTestGetREST:cacheTestRad/${sys:resource_path}" ]
+  }, {
+    "templateKey" : "method",
+    "values" : [ "CUSTOM" ]
+  } ],
+  "active" : false
+}

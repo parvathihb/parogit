@@ -1,0 +1,31 @@
+{
+  "id" : "23f78b5c-b6f8-459c-91c4-9f5abf2a54e7",
+  "names" : [ {
+    "value" : "Default Policy for API checkAPI",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "adee086d-e77f-4197-a7fb-08dde4eb6a4f",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "290bd4cb-a9d9-462b-b77c-31a94199fbec",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

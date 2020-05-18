@@ -1,0 +1,52 @@
+{
+  "id" : "03f9b96a-fc97-4f83-bea5-00c484b14bfb",
+  "names" : [ {
+    "value" : "Context-based Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "contextBasedRouting",
+  "parameters" : [ {
+    "templateKey" : "routeTo",
+    "parameters" : [ {
+      "templateKey" : "endpointUri",
+      "values" : [ "${LabCaseEndpointAlias}/${sys:resource_path}" ]
+    }, {
+      "templateKey" : "method",
+      "values" : [ "CUSTOM" ]
+    } ]
+  }, {
+    "templateKey" : "contextRules",
+    "parameters" : [ {
+      "templateKey" : "name",
+      "values" : [ "GET" ]
+    }, {
+      "templateKey" : "contextConditionOperator",
+      "values" : [ "or" ]
+    }, {
+      "templateKey" : "routeTo",
+      "parameters" : [ {
+        "templateKey" : "endpointUri",
+        "values" : [ "${LabCaseEndpointAlias}/${sys:resource_path}&project_id=${LabCaseProjectId}" ]
+      }, {
+        "templateKey" : "method",
+        "values" : [ "CUSTOM" ]
+      } ]
+    }, {
+      "templateKey" : "contextCondition",
+      "parameters" : [ {
+        "templateKey" : "conditionVariable",
+        "values" : [ "predefined" ]
+      }, {
+        "templateKey" : "conditionOperator",
+        "values" : [ "EQ" ]
+      }, {
+        "templateKey" : "conditionDataType",
+        "values" : [ "INBOUND_HTTP_METHOD" ]
+      }, {
+        "templateKey" : "conditionValue",
+        "values" : [ "GET" ]
+      } ]
+    } ]
+  } ],
+  "active" : false
+}

@@ -1,0 +1,107 @@
+{
+  "apiDefinition" : {
+    "wsdl" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<wsdl:definitions name=\"cacheTestSoap\" targetNamespace=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\" xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:soapjms=\"http://www.w3.org/2010/soapjms/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\">\r\n  <wsdl:types>\r\n    <xsd:schema targetNamespace=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\">\r\n          <xsd:element name=\"getPropertyValue\" type=\"tns:getPropertyValue\"/>\r\n          <xsd:element name=\"getPropertyValueResponse\" type=\"tns:getPropertyValueResponse\"/>\r\n          <xsd:complexType name=\"getPropertyValue\">\r\n            <xsd:sequence>\r\n              <xsd:element name=\"propertyName\" nillable=\"true\" type=\"xsd:string\"/>\r\n            </xsd:sequence>\r\n          </xsd:complexType>\r\n          <xsd:complexType name=\"getPropertyValueResponse\">\r\n            <xsd:sequence>\r\n              <xsd:element name=\"mappedValue\" nillable=\"true\" type=\"xsd:string\"/>\r\n            </xsd:sequence>\r\n          </xsd:complexType>\r\n        \t</xsd:schema>\r\n  </wsdl:types>\r\n  <wsdl:message name=\"cacheTestSoap_PortType_getPropertyValue\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:getPropertyValue\">\r\n    </wsdl:part>\r\n  </wsdl:message>\r\n  <wsdl:message name=\"cacheTestSoap_PortType_getPropertyValueResponse\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:getPropertyValueResponse\">\r\n    </wsdl:part>\r\n  </wsdl:message>\r\n  <wsdl:portType name=\"cacheTestSoap_PortType\">\r\n    <wsdl:operation name=\"getPropertyValue\">\r\n      <wsdl:input message=\"tns:cacheTestSoap_PortType_getPropertyValue\">\r\n    </wsdl:input>\r\n      <wsdl:output message=\"tns:cacheTestSoap_PortType_getPropertyValueResponse\">\r\n    </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"soapCacheTest_cacheTestSoap_Binder\" type=\"tns:cacheTestSoap_PortType\">\r\n    <soap:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\r\n    <wsdl:operation name=\"getPropertyValue\">\r\n      <soap:operation soapAction=\"soapCacheTest_cacheTestSoap_Binder_getPropertyValue\" style=\"document\"/>\r\n      <wsdl:input>\r\n        <soap:body parts=\"parameters\" use=\"literal\"/>\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body parts=\"parameters\" use=\"literal\"/>\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:service name=\"soapCacheTest.cacheTestSoap\">\r\n    <wsdl:port name=\"soapCacheTest_cacheTestSoap_Port\" binding=\"tns:soapCacheTest_cacheTestSoap_Binder\">\r\n      <soap:address location=\"http://SAG-6F0VMV2.eur.ad.sag:6000/ws/soapCacheTest:cacheTestSoap/soapCacheTest_cacheTestSoap_Port\"/>\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>\r\n",
+    "baseWsdlUri" : "C:\\SoftwareAG\\IntegrationServer\\instances\\default\\temp\\1589452952886\\",
+    "nativeUri" : [ "http://SAG-6F0VMV2.eur.ad.sag:6000/ws/soapCacheTest:cacheTestSoap/soapCacheTest_cacheTestSoap_Port" ],
+    "serviceName" : "soapCacheTest.cacheTestSoap",
+    "operationsInfo" : [ {
+      "name" : "getPropertyValue",
+      "namespace" : "http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "soapCacheTest_cacheTestSoap_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<soap:getPropertyValue xmlns:soap=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\">\r\n  <propertyName>string</propertyName>\r\n</soap:getPropertyValue>",
+        "outputMessage" : "<soap:getPropertyValueResponse xmlns:soap=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\">\r\n  <mappedValue>string</mappedValue>\r\n</soap:getPropertyValueResponse>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "soapCacheTest_cacheTestSoap_Binder_getPropertyValue",
+      "isRESTInvokeEnabled" : true,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "responses" : {
+            "200" : {
+              "content" : {
+                "application/xml" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{}"
+                  },
+                  "examples" : { },
+                  "example" : "<soap:getPropertyValueResponse xmlns:soap=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\">\r\n  <mappedValue>string</mappedValue>\r\n</soap:getPropertyValueResponse>"
+                },
+                "application/json" : {
+                  "schema" : {
+                    "type" : "gateway",
+                    "schema" : "{}"
+                  },
+                  "examples" : { },
+                  "example" : "{\"getPropertyValueResponse\":{\"mappedValue\":\"string\"}}"
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "requestBody" : {
+            "content" : {
+              "application/xml" : {
+                "examples" : { },
+                "example" : "<soap:getPropertyValue xmlns:soap=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\">\r\n  <propertyName>string</propertyName>\r\n</soap:getPropertyValue>"
+              },
+              "application/json" : {
+                "examples" : { },
+                "example" : "{\"getPropertyValue\":{\"propertyName\":\"string\"}}"
+              }
+            },
+            "name" : "requestBody"
+          }
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "getPropertyValue",
+        "invokePath" : "/getPropertyValue"
+      },
+      "scopes" : [ ],
+      "tags" : [ ]
+    } ],
+    "type" : "soap",
+    "serviceRegistryDisplayName" : "soapCacheTest.cacheTestSoap_1.0",
+    "operationPolicies" : {
+      "getPropertyValue" : ""
+    },
+    "isRESTInvokeEnabled" : false
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://SAG-6F0VMV2.eur.ad.sag:6000/ws/soapCacheTest:cacheTestSoap/soapCacheTest_cacheTestSoap_Port",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "soapCacheTest.cacheTestSoap",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "SOAP",
+  "owner" : "Administrator",
+  "policies" : [ "c48d629d-d354-4bc5-9411-1ca17fa712dc" ],
+  "referencedFiles" : {
+    "wsd.wsdl" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<wsdl:definitions name=\"cacheTestSoap\" targetNamespace=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\" xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:soapjms=\"http://www.w3.org/2010/soapjms/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\">\r\n  <wsdl:types>\r\n    <xsd:schema targetNamespace=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:tns=\"http://SAG-6F0VMV2.eur.ad.sag/soapCacheTest:cacheTestSoap\">\r\n          <xsd:element name=\"getPropertyValue\" type=\"tns:getPropertyValue\"/>\r\n          <xsd:element name=\"getPropertyValueResponse\" type=\"tns:getPropertyValueResponse\"/>\r\n          <xsd:complexType name=\"getPropertyValue\">\r\n            <xsd:sequence>\r\n              <xsd:element name=\"propertyName\" nillable=\"true\" type=\"xsd:string\"/>\r\n            </xsd:sequence>\r\n          </xsd:complexType>\r\n          <xsd:complexType name=\"getPropertyValueResponse\">\r\n            <xsd:sequence>\r\n              <xsd:element name=\"mappedValue\" nillable=\"true\" type=\"xsd:string\"/>\r\n            </xsd:sequence>\r\n          </xsd:complexType>\r\n        \t</xsd:schema>\r\n  </wsdl:types>\r\n  <wsdl:message name=\"cacheTestSoap_PortType_getPropertyValue\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:getPropertyValue\">\r\n    </wsdl:part>\r\n  </wsdl:message>\r\n  <wsdl:message name=\"cacheTestSoap_PortType_getPropertyValueResponse\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:getPropertyValueResponse\">\r\n    </wsdl:part>\r\n  </wsdl:message>\r\n  <wsdl:portType name=\"cacheTestSoap_PortType\">\r\n    <wsdl:operation name=\"getPropertyValue\">\r\n      <wsdl:input message=\"tns:cacheTestSoap_PortType_getPropertyValue\">\r\n    </wsdl:input>\r\n      <wsdl:output message=\"tns:cacheTestSoap_PortType_getPropertyValueResponse\">\r\n    </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"soapCacheTest_cacheTestSoap_Binder\" type=\"tns:cacheTestSoap_PortType\">\r\n    <soap:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\r\n    <wsdl:operation name=\"getPropertyValue\">\r\n      <soap:operation soapAction=\"soapCacheTest_cacheTestSoap_Binder_getPropertyValue\" style=\"document\"/>\r\n      <wsdl:input>\r\n        <soap:body parts=\"parameters\" use=\"literal\"/>\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body parts=\"parameters\" use=\"literal\"/>\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:service name=\"soapCacheTest.cacheTestSoap\">\r\n    <wsdl:port name=\"soapCacheTest_cacheTestSoap_Port\" binding=\"tns:soapCacheTest_cacheTestSoap_Binder\">\r\n      <soap:address location=\"http://SAG-6F0VMV2.eur.ad.sag:6000/ws/soapCacheTest:cacheTestSoap/soapCacheTest_cacheTestSoap_Port\"/>\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>\r\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-14 10:06:10 GMT",
+  "lastModified" : "2020-05-14 10:42:32 GMT",
+  "systemVersion" : 1,
+  "id" : "e937763d-029a-4f2e-897c-4acb6739b98c"
+}

@@ -1,0 +1,120 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "createEmpData"
+    },
+    "serviceRegistryDisplayName" : "createEmpData_1.0",
+    "schemes" : [ ],
+    "consumes" : [ "application/json" ],
+    "produces" : [ "application/json" ],
+    "security" : [ ],
+    "paths" : {
+      "/empData" : {
+        "post" : {
+          "description" : "",
+          "operationId" : "empData_POST_1",
+          "responses" : {
+            "200" : {
+              "description" : "OK",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/empData_POST_response"
+                  },
+                  "examples" : { }
+                }
+              },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            },
+            "401" : {
+              "description" : "Access Denied",
+              "content" : { },
+              "links" : { },
+              "schema" : { },
+              "examples" : { },
+              "headers" : { }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/empData"
+                },
+                "examples" : { }
+              }
+            },
+            "name" : "empData_POST_1"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/empData",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://daeitrain44459.eur.ad.sag:5555/rad/cacheRepro:employeeDataCreareAPIDescriptor",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : {
+        "empData_POST_response" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"code\",\"empOut\",\"status\"],\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"empOut\":{\"$ref\":\"#/components/schemas/empOut\"},\"status\":{\"type\":\"string\"}}}"
+        },
+        "empData" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"name\",\"place\"],\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"place\":{\"type\":\"string\"}}}"
+        },
+        "empOut" : {
+          "type" : "gateway",
+          "schema" : "{\"required\":[\"name\",\"id\",\"place\"],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"place\":{\"type\":\"string\"}}}"
+        }
+      },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://daeitrain44459.eur.ad.sag:5555/rad/cacheRepro:employeeDataCreareAPIDescriptor",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "createEmpData",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "1a598590-c99c-4bc2-a69f-e878e8aee037" ],
+  "referencedFiles" : {
+    "empSwagger.json" : "---\r\nswagger: \"2.0\"\r\ninfo:\r\n  version: \"1.0\"\r\n  title: \"createEmpData\"\r\nhost: \"daeitrain44459.eur.ad.sag:5555\"\r\nbasePath: \"/rad/cacheRepro:employeeDataCreareAPIDescriptor\"\r\nschemes:\r\n- \"http\"\r\nconsumes:\r\n- \"application/json\"\r\nproduces:\r\n- \"application/json\"\r\npaths:\r\n  /empData:\r\n    post:\r\n      description: \"\"\r\n      operationId: \"empData_POST_1\"\r\n      parameters:\r\n      - in: \"body\"\r\n        name: \"empData\"\r\n        description: \"\"\r\n        required: true\r\n        schema:\r\n          $ref: \"#/definitions/empData\"\r\n      responses:\r\n        200:\r\n          description: \"OK\"\r\n          schema:\r\n            $ref: \"#/definitions/empData_POST_response\"\r\n        401:\r\n          description: \"Access Denied\"\r\ndefinitions:\r\n  empData_POST_response:\r\n    required:\r\n    - \"code\"\r\n    - \"empOut\"\r\n    - \"status\"\r\n    properties:\r\n      status:\r\n        type: \"string\"\r\n      code:\r\n        type: \"string\"\r\n      empOut:\r\n        $ref: \"#/definitions/empOut\"\r\n  empOut:\r\n    required:\r\n    - \"id\"\r\n    - \"name\"\r\n    - \"place\"\r\n    properties:\r\n      id:\r\n        type: \"string\"\r\n      name:\r\n        type: \"string\"\r\n      place:\r\n        type: \"string\"\r\n  empData:\r\n    required:\r\n    - \"name\"\r\n    - \"place\"\r\n    properties:\r\n      name:\r\n        type: \"string\"\r\n      place:\r\n        type: \"string\"\r\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-05-05 13:33:33 GMT",
+  "lastModified" : "2020-05-13 08:05:16 GMT",
+  "nextVersion" : "58231e70-52aa-466e-a7c6-77050d0df050",
+  "systemVersion" : 1,
+  "id" : "e23311a8-4e81-47ab-84bc-386754fe2a48"
+}

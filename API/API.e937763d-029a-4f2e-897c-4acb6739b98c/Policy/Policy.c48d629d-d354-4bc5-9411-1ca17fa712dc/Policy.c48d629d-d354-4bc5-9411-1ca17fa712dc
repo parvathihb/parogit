@@ -1,0 +1,37 @@
+{
+  "id" : "c48d629d-d354-4bc5-9411-1ca17fa712dc",
+  "names" : [ {
+    "value" : "Default Policy for API soapCacheTest.cacheTestSoap",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "f5301f3f-cd71-43dd-b961-f96d36dae3a5",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "3f446386-894d-4fa1-b508-d8d99c3befcc",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "7537fa15-073f-44c1-a92b-fb3fbfd33cef",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

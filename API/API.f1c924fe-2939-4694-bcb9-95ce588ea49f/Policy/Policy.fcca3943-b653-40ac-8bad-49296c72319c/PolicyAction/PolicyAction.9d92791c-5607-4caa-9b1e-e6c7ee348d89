@@ -1,0 +1,16 @@
+{
+  "id" : "9d92791c-5607-4caa-9b1e-e6c7ee348d89",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://daeitrain44459.eur.ad.sag:5555/rad/soapCacheTest.REST:cacheResultsGETPOST/${sys:resource_path}" ]
+  }, {
+    "templateKey" : "method",
+    "values" : [ "CUSTOM" ]
+  } ],
+  "active" : false
+}

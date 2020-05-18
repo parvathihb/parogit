@@ -1,0 +1,17 @@
+{
+  "id" : "f1f1d457-1c33-4d56-bf92-8d61518b2093",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://daeitrain44459.eur.ad.sag:5555/rad/ZApiTest.AddIntegers:new_rad/${sys:resource_path}" ]
+  } ],
+  "active" : false
+}

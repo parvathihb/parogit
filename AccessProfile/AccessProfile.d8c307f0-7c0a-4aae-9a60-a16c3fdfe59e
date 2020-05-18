@@ -1,0 +1,12 @@
+{
+  "id" : "d8c307f0-7c0a-4aae-9a60-a16c3fdfe59e",
+  "name" : "Test",
+  "description" : "Test Team for Repro",
+  "privilege" : [ 0, 1, 2, 3, 4, 5, 6, 7, 18, 22, 25 ],
+  "groupIds" : [ "Administrators", "Everybody" ],
+  "systemDefined" : false,
+  "teamAdmin" : {
+    "userIds" : [ ],
+    "groupIds" : [ ]
+  }
+}

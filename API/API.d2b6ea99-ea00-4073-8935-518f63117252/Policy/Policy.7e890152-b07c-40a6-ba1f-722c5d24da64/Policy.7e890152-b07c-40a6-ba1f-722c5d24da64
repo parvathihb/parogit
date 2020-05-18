@@ -1,0 +1,49 @@
+{
+  "id" : "7e890152-b07c-40a6-ba1f-722c5d24da64",
+  "names" : [ {
+    "value" : "Default Policy for API cacheTestRad",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "d0ecdfe1-988c-47ad-86be-0e91f847728b",
+      "order" : "0"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "3d4f1e41-8426-47be-b8fc-7db654fe851c",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "d204cf1f-6c2e-47f6-a37b-a6938bd6ab19",
+      "order" : "0"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "1fd185f8-d829-4434-ab0d-93f34e48a2e1",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "5f5fc81a-a0f4-4001-a6f7-1daf72c3417f",
+      "order" : "0"
+    } ],
+    "stageKey" : "responseProcessing"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

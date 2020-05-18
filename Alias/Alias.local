@@ -1,0 +1,24 @@
+{
+  "id" : "local",
+  "name" : "local",
+  "description" : "API Gateway as an Authorization server.",
+  "type" : "authServerAlias",
+  "owner" : "Administrator",
+  "localIntrospectionConfig" : {
+    "issuer" : "Test Provider"
+  },
+  "tokenGeneratorConfig" : {
+    "expiry" : 180,
+    "algorithm" : "RS256",
+    "accessTokenExpInterval" : 3600,
+    "authCodeExpInterval" : 600
+  },
+  "sslConfig" : {
+    "keyStoreAlias" : "DEFAULT_IS_KEYSTORE",
+    "keyAlias" : "ssos"
+  },
+  "metadata" : { },
+  "scopes" : [ ],
+  "supportedGrantTypes" : [ "authorization_code", "password", "client_credentials", "refresh_token", "implicit" ],
+  "authServerType" : "LOCAL_IS"
+}

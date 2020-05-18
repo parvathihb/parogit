@@ -1,0 +1,31 @@
+{
+  "configId" : "settings",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "preferredSettings" : {
+      "extendedKeys" : {
+        "pg_oauth2_isHTTPS" : "",
+        "pg_JWT_isHTTPS" : "",
+        "enableTeamWork" : ""
+      },
+      "wattKeys" : {
+        "watt.net.ssl.client.handshake.maxVersion" : "tls",
+        "watt.net.ssl.server.handshake.minVersion" : "tls",
+        "watt.net.ssl.server.cipherSuiteList" : "default"
+      }
+    },
+    "savedSettings" : {
+      "extendedKeys" : {
+        "pg_oauth2_isHTTPS" : "false",
+        "pg_JWT_isHTTPS" : "true",
+        "enableTeamWork" : "true"
+      },
+      "wattKeys" : {
+        "watt.net.ssl.client.handshake.maxVersion" : "tls",
+        "watt.net.ssl.server.handshake.minVersion" : "tls",
+        "watt.net.ssl.server.cipherSuiteList" : "default"
+      }
+    }
+  }
+}

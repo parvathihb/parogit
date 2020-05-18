@@ -1,0 +1,14 @@
+{
+  "id" : "bb450809-7693-437a-9a5d-6ad36c50f879",
+  "loginId" : "user",
+  "caller" : "user",
+  "firstName" : "test",
+  "lastName" : "usr",
+  "hashedPassword" : "{sha-256_v2}LGbFx9F9Q5x+xJsa3O92MhddcLqvH66z+7TZsd9SB0WHqyr+a8EGGjAxMDAw",
+  "type" : "local",
+  "emailAddresses" : [ ],
+  "allowDigestAuth" : false,
+  "active" : true,
+  "systemDefined" : false,
+  "language" : ""
+}

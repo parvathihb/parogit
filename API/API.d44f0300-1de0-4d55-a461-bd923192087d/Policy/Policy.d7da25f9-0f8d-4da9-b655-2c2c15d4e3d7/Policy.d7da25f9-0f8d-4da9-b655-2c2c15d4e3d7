@@ -1,0 +1,26 @@
+{
+  "id" : "d7da25f9-0f8d-4da9-b655-2c2c15d4e3d7",
+  "names" : [ {
+    "value" : "Default Policy for API addTwoRestTrnformation",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "c70856bf-7f3c-45c0-9e56-7317da3da50f"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "f1f1d457-1c33-4d56-bf92-8d61518b2093"
+    } ],
+    "stageKey" : "routing"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}

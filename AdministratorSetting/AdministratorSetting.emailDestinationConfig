@@ -1,0 +1,26 @@
+{
+  "configId" : "emailDestinationConfig",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "monitorSPContent" : "",
+    "monitorSLASubject" : "",
+    "defaultEmailCharset" : "",
+    "serviceEmail" : "",
+    "monitorSPSubject" : "",
+    "monitorSLAContent" : "",
+    "testRecipient" : "Customer@company.com",
+    "userName" : "ApiGateway@company.com",
+    "truststoreAlias" : "",
+    "fromEmail" : "Administrator@company.com",
+    "internalEmail" : "",
+    "throttlingContent" : "",
+    "password" : "********************************",
+    "smtpServer" : "localhost",
+    "throttlingSubject" : "",
+    "port" : "25",
+    "logInvocationSubject" : "",
+    "logInvocationContent" : "",
+    "tls" : "none"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "apiDefinition" : {
+    "info" : {
+      "version" : "1.0",
+      "title" : "checkAPI"
+    },
+    "serviceRegistryDisplayName" : "TryAPI_1.0",
+    "schemes" : [ ],
+    "security" : [ ],
+    "paths" : {
+      "/user" : {
+        "get" : {
+          "consumes" : [ ],
+          "responses" : { },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "requestBody"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/user",
+        "enabled" : true
+      },
+      "/customers" : {
+        "get" : {
+          "consumes" : [ ],
+          "responses" : { },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ],
+          "requestBody" : {
+            "content" : { },
+            "name" : "requestBody"
+          }
+        },
+        "scopes" : [ ],
+        "displayName" : "/customers",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : { },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ {
+      "url" : "http://daeitrain42407:5555/gateway/checkAPI/1.0",
+      "variables" : { }
+    } ],
+    "components" : {
+      "schemas" : { },
+      "responses" : { },
+      "parameters" : { },
+      "examples" : { },
+      "requestBodies" : { },
+      "headers" : { },
+      "links" : { },
+      "callbacks" : { }
+    },
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://daeitrain42407:5555/gateway/checkAPI/1.0",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "TryAPI",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "user1",
+  "policies" : [ "ca2389b4-6c8b-470d-97b9-a37e15b45752" ],
+  "referencedFiles" : {
+    "checkAPI.json" : "{\r\n  \"swagger\" : \"2.0\",\r\n  \"info\" : {\r\n    \"version\" : \"1.0\",\r\n    \"title\" : \"checkAPI\"\r\n  },\r\n  \"host\" : \"daeitrain42407:5555\",\r\n  \"basePath\" : \"/gateway/checkAPI/1.0\",\r\n  \"schemes\" : [ \"http\" ],\r\n  \"paths\" : {\r\n    \"/user\" : {\r\n      \"get\" : {\r\n        \"consumes\" : [ ],\r\n        \"parameters\" : [ ]\r\n      }\r\n    },\r\n    \"/customers\" : {\r\n      \"get\" : {\r\n        \"consumes\" : [ ],\r\n        \"parameters\" : [ ]\r\n      }\r\n    }\r\n  }\r\n}\r\n"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2020-03-23 16:17:04 GMT",
+  "lastModified" : "2020-05-04 07:49:14 GMT",
+  "systemVersion" : 1,
+  "id" : "e98303fa-92b1-41f9-8b9d-3bd567b85dd7"
+}

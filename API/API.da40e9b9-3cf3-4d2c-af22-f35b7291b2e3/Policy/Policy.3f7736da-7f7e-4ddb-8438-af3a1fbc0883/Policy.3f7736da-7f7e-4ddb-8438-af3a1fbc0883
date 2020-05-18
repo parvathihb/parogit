@@ -1,0 +1,49 @@
+{
+  "id" : "3f7736da-7f7e-4ddb-8438-af3a1fbc0883",
+  "names" : [ {
+    "value" : "Default Policy for API LabCaseTestService_APIG",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "81af11f2-3d34-456a-a4fc-73b2d10afc49",
+      "order" : "0"
+    }, {
+      "enforcementObjectId" : "03f00a0d-0b38-4aa3-a8ca-8a48d4af07dd",
+      "order" : "1"
+    } ],
+    "stageKey" : "requestPayloadProcessing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "03f9b96a-fc97-4f83-bea5-00c484b14bfb",
+      "order" : "0"
+    }, {
+      "enforcementObjectId" : "99bd326b-3344-4588-8485-f37d22d34d56",
+      "order" : "1"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "b3c314e9-86e5-4542-bef2-891792bbbcd2",
+      "order" : "0"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "82e2c079-90e9-4877-9d00-d8cbe2ff54bf",
+      "order" : "0"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "systemPolicy" : false,
+  "active" : false,
+  "global" : false
+}
